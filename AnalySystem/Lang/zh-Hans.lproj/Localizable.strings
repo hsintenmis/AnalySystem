@@ -39,6 +39,7 @@
 "mm_11" = "十一月";
 "mm_12" = "十二月";
 
+"countryname_all" = "全球";
 "countryname_TW" = "台湾";
 "countryname_US" = "美国";
 "countryname_CA" = "加拿大";
@@ -81,3 +82,5 @@
 "FMT_userprivmsg" = "%@ 您好, 目前国别权限如下:";
 "err_trylatermsg" = "资料错误, 请稍候再重试...";
 "datatranplzwait" = "资料传送中，请稍后...";
+"selcountry" = "選擇國家";
+"select_ok" = "選擇完成";

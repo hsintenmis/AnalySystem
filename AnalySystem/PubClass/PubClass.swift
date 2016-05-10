@@ -50,13 +50,9 @@ class PubClass {
     let aryLangCode = ["zh-Hant", "zh-Hans", "Base"]  // 語系相關
     let aryProductType = ["S", "C", "N"]   // 商品分類
     
-    // soqibed H01..., 遠紅外線/搖擺機 設備代碼, 對應時間
-    let aryHotDevCode = ["H00","H01","H02","H10","H11","H12"]
-    let aryHotDevMinsVal = [0, 15, 30, 45, 60]
-    let aryS00DevMinsVal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 30]
-    
-    // 顏色
-    let dictColor = ["white":"FFFFFF", "red":"FFCCCC", "gray":"C0C0C0", "silver":"F0F0F0", "blue":"66CCFF", "black":"000000", "green":"99CC33", "RedDark":"990000", "GreenDark":"336633", "BlueDark":"000099"]
+    // TW/MY 營業處代號
+    let aryOfficeTW = ["A","C","D","E","F"]
+    let aryOfficeMY = ["MYT01A01","MYT01A02","MYT01A03"]
     
     /**
      * init
@@ -533,5 +529,25 @@ class PubClass {
     
     // ********** 以下為本專案使用 ********** //
     
-    
+    /**
+     * 去除小數點，格式化為貨幣顯示形式, ex. 12,345,678
+     * @parm bolUnit: 顯示為萬元
+     */
+    func fmtDelPoint(strPrice: String!, bolUnit: Bool)->String {
+        var price = Float(strPrice)
+        var strRS = "0"
+        
+        if (bolUnit == true) {
+            price = (price! / 10000)
+        }
+        
+        let objFMT = NSNumberFormatter()
+        objFMT.numberStyle = .DecimalStyle
+        objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
+        objFMT.maximumFractionDigits = 0
+        
+        strRS = objFMT.stringFromNumber(price!)!
+        
+        return strRS
+    }
 }

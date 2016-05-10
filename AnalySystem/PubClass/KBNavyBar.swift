@@ -43,7 +43,8 @@ class KBNavyBar {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = false  // 半透明
-        toolBar.barTintColor = pubClass.ColorHEX(pubClass.dictColor["silver"]!)  // 背景顏色
+        //toolBar.barTintColor = pubClass.ColorHEX(pubClass.dictColor["silver"]!)  // 背景顏色
+        toolBar.barTintColor = pubClass.ColorHEX(myColor.Sliver.rawValue)  // 背景顏色
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: pubClass.getLang("select_ok"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(KBNavyBar.SelectDone))
