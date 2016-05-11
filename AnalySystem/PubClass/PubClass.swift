@@ -537,21 +537,25 @@ class PubClass {
      * @parm bolUnit: 顯示為萬元
      */
     func fmtDelPoint(strPrice: String!, bolUnit: Bool)->String {
-        var price = Float(strPrice)
-        var strRS = "0"
-        
-        if (bolUnit == true) {
-            price = (price! / 10000)
+        if let tmpPrice = Float32(strPrice) {
+            var price = tmpPrice
+            var strRS = "0"
+            
+            if (bolUnit == true) {
+                price = (price / 10000)
+            }
+            
+            let objFMT = NSNumberFormatter()
+            objFMT.numberStyle = .DecimalStyle
+            objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
+            objFMT.maximumFractionDigits = 0
+            
+            strRS = objFMT.stringFromNumber(price)!
+            
+            return strRS
+        } else {
+            return strPrice
         }
-        
-        let objFMT = NSNumberFormatter()
-        objFMT.numberStyle = .DecimalStyle
-        objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
-        objFMT.maximumFractionDigits = 0
-        
-        strRS = objFMT.stringFromNumber(price!)!
-        
-        return strRS
     }
     
     /**
@@ -573,8 +577,6 @@ class PubClass {
         } else {
             return strPrice
         }
-        
-        
-
     }
+    
 }

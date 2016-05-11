@@ -62,30 +62,8 @@ class BranchSaleCell: UITableViewCell {
         
         for strField in aryFiledKey {
             let strPrice = dictItem[strField] as! String
-            dictField[strField]!.text = fmtDelPoint(strPrice, bolUnit: dictItem["isUnit"] as! Bool)
+            dictField[strField]!.text = pubClass.fmtDelPoint(strPrice, bolUnit: dictItem["isUnit"] as! Bool)
         }
-    }
-    
-    /**
-     * 去除小數點，格式化為貨幣顯示形式, ex. 12,345,678
-     * @parm bolUnit: 顯示為萬元
-     */
-    private func fmtDelPoint(strPrice: String!, bolUnit: Bool)->String {
-        var price = Float(strPrice)
-        var strRS = "0"
-        
-        if (bolUnit == true) {
-            price = (price! / 10000)
-        }
-        
-        let objFMT = NSNumberFormatter()
-        objFMT.numberStyle = .DecimalStyle
-        objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
-        objFMT.maximumFractionDigits = 0
-        
-        strRS = objFMT.stringFromNumber(price!)!
-        
-        return strRS
     }
     
 }

@@ -299,6 +299,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ny-kc-cfr">
                                 <rect key="frame" x="-2" y="524" width="324" height="44"/>
                                 <items>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="H6u-XH-yyi"/>
                                     <barButtonItem title="全球" id="3RH-QY-aUc">
                                         <connections>
                                             <action selector="actGrpBranch:" destination="99t-j3-ALf" id="xwH-6f-pwA"/>
@@ -316,6 +317,7 @@
                                             <action selector="actGrpBranch:" destination="99t-j3-ALf" id="1Fp-0T-Yux"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="HME-MJ-mU9"/>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="統計日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCL-EF-vd3">

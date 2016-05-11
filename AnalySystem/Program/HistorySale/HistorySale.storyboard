@@ -113,6 +113,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUN-qA-qo8">
                                 <rect key="frame" x="-2" y="524" width="324" height="44"/>
                                 <items>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="wa4-iF-MJa"/>
                                     <barButtonItem title="選擇年月區間" id="ZhC-6S-iOH">
                                         <connections>
                                             <action selector="actYYMM:" destination="Jl2-qh-GXq" id="vS2-HM-Ppj"/>
@@ -124,6 +125,7 @@
                                             <action selector="actTot:" destination="Jl2-qh-GXq" id="fqK-sU-Wid"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="Xmj-Ir-686"/>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ias-gz-h0G">
