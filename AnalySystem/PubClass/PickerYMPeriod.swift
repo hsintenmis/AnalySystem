@@ -6,33 +6,34 @@ import Foundation
 import UIKit
 
 /**
- * protocol, 國別選擇 Delegate
+ * protocol, 年月區間選擇 Delegate
  */
-protocol PickerCountryDelegate {
+protocol PickerYMPeriodDelegate {
     /**
-     * Pickr view 虛擬鍵盤, 點取'完成' btn, 回傳選擇的 country code
+     * Pickr view 虛擬鍵盤, 點取'完成' btn, 回傳選擇的起始 position
      */
-    func doneSelect(strCountry: String)
+    func doneDateSelect(aryPosition: Array<Int>)
 }
 
 /**
- * UIPickerView 公用程式，國別選擇
+ * UIPickerView 公用程式，年月區間選擇
  */
-class PickerCountry: UIViewController {
-    
+class PickerYMPeriod: UIViewController {
     @IBOutlet weak var btnCancel: UIBarButtonItem!
     @IBOutlet weak var btnDone: UIBarButtonItem!
-    @IBOutlet weak var pickerView: UIPickerView!
-    
+    @IBOutlet weak var pickView0: UIPickerView!
+    @IBOutlet weak var pickView1: UIPickerView!
+
     // delegate
-    var delegate = PickerCountryDelegate?()
+    var delegate = PickerYMPeriodDelegate?()
     
     // property 設定
-    private var pubClass  =  PubClass()
+    private var pubClass = PubClass()
+    private var aryPickView: Array<UIPickerView>!
     
     // public, parent 設定
-    var aryCountry: Array<String>! // 選單 list array data
-    var strSelCountry: String? // 選擇的國家
+    var aryYYMM: Array<String>! // 選單 list array data
+    var aryPosition = [0, 0] // 資料開始/結束 position
     
     /**
      * viewDidLoad
@@ -40,23 +41,16 @@ class PickerCountry: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 設定預設值
-        if (strSelCountry != nil) {
-            setDefVal(strSelCountry!)
-        } else {
-            strSelCountry = aryCountry[0]
-        }
+        aryPickView = [pickView0, pickView1]
+        setDefVal(aryPosition)
     }
     
     /**
      * 設定下拉資料的預設值
      */
-    func setDefVal(strVal: String) {
-        for i in (0..<aryCountry.count) {
-            if (aryCountry[i] == strVal) {
-                pickerView.selectRow(i, inComponent: 0, animated: false)
-                break
-            }
+    func setDefVal(aryPosition: Array<Int>) {
+        for loopi in (0..<2) {
+            (aryPickView[loopi]).selectRow(aryPosition[loopi], inComponent: 0, animated: false)
         }
     }
     
@@ -71,22 +65,22 @@ class PickerCountry: UIViewController {
      * #mark: UIPickerViewDelegate, 各個下拉選單，有幾筆資料
      */
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return aryCountry.count
+        return aryYYMM.count
     }
     
     /**
      * #mark: UIPickerViewDelegate, 各個下拉選單，position 對應的 String
      */
     @objc func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        return pubClass.getLang("countryname_" + aryCountry[row])
+    
+        return pubClass.subStr(aryYYMM[row], strFrom: 0, strEnd: 4) + " " + pubClass.getLang("mm_" + pubClass.subStr(aryYYMM[row], strFrom: 4, strEnd: 6))
     }
     
     /**
      * #mark: UIPickerViewDelegate, 各個下拉選單，點取執行相關程序
      */
     @objc func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        strSelCountry = aryCountry[row]
+        aryPosition[pickerView.tag] = row
     }
     
     /**
@@ -100,9 +94,7 @@ class PickerCountry: UIViewController {
      * act, btn 點取 '完成'
      */
     @IBAction func actDone(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: {self.delegate?.doneSelect(self.strSelCountry!)})
-        
+        self.dismissViewControllerAnimated(true, completion: {self.delegate?.doneDateSelect(self.aryPosition)})
     }
-    
     
 }

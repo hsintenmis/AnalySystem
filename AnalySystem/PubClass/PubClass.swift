@@ -54,6 +54,9 @@ class PubClass {
     let aryOfficeTW = ["A","C","D","E","F"]
     let aryOfficeMY = ["MYT01A01","MYT01A02","MYT01A03"]
     
+    // 歷史業績/所有資料 開始 YYMM
+    let D_YYMM_START = "200501"
+    
     /**
      * init
      */
@@ -549,5 +552,29 @@ class PubClass {
         strRS = objFMT.stringFromNumber(price!)!
         
         return strRS
+    }
+    
+    /**
+     * 格式化為貨幣顯示形式, ex. 12,345,678.00, 小數點兩位
+     */
+    func fmtCurrency(strPrice: String!)->String {
+        // 是否為 '數字'
+        if let price = Float32(strPrice) {
+            var strRS = "0"
+            
+            let objFMT = NSNumberFormatter()
+            objFMT.numberStyle = .DecimalStyle
+            objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
+            objFMT.maximumFractionDigits = 2
+            objFMT.minimumFractionDigits = 2
+            strRS = objFMT.stringFromNumber(price)!
+            
+            return strRS
+        } else {
+            return strPrice
+        }
+        
+        
+
     }
 }

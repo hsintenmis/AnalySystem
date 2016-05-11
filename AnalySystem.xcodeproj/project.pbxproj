@@ -75,6 +75,7 @@
 		D7F105E41CE1AE140054C895 /* HistorySaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F105E31CE1AE140054C895 /* HistorySaleCell.swift */; };
 		D7F105E61CE1AEC30054C895 /* HistorySaleTotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F105E51CE1AEC30054C895 /* HistorySaleTotCell.swift */; };
 		D7F105E81CE1BE2A0054C895 /* PickerCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F105E71CE1BE2A0054C895 /* PickerCountry.swift */; };
+		D7F4EAF61CE2DF15007D6926 /* PickerYMPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4EAF51CE2DF15007D6926 /* PickerYMPeriod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		D7F105E31CE1AE140054C895 /* HistorySaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistorySaleCell.swift; path = Program/HistorySale/HistorySaleCell.swift; sourceTree = "<group>"; };
 		D7F105E51CE1AEC30054C895 /* HistorySaleTotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistorySaleTotCell.swift; path = Program/HistorySale/HistorySaleTotCell.swift; sourceTree = "<group>"; };
 		D7F105E71CE1BE2A0054C895 /* PickerCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerCountry.swift; sourceTree = "<group>"; };
+		D7F4EAF51CE2DF15007D6926 /* PickerYMPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerYMPeriod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				D752C3291CE032C7001F97DB /* KBNavyBar.swift */,
 				D752C32A1CE032C7001F97DB /* NoDataView.swift */,
 				D7F105E71CE1BE2A0054C895 /* PickerCountry.swift */,
+				D7F4EAF51CE2DF15007D6926 /* PickerYMPeriod.swift */,
 			);
 			path = PubClass;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				D7F105D91CE169EA0054C895 /* BranchSale.swift in Sources */,
 				D752C3341CE032C7001F97DB /* JSONClass.swift in Sources */,
 				D7F105DD1CE16D670054C895 /* BranchSaleCell.swift in Sources */,
+				D7F4EAF61CE2DF15007D6926 /* PickerYMPeriod.swift in Sources */,
 				D7F105E41CE1AE140054C895 /* HistorySaleCell.swift in Sources */,
 				D7F105E81CE1BE2A0054C895 /* PickerCountry.swift in Sources */,
 				D752C3321CE032C7001F97DB /* FileMang.swift in Sources */,

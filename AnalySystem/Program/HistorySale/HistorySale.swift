@@ -7,35 +7,34 @@ import UIKit
 /**
  * 歷史業績主頁面
  */
-class HistorySale: UIViewController, PickerCountryDelegate {
+class HistorySale: UIViewController, PickerCountryDelegate, PickerYMPeriodDelegate {
     
     // @IBOutlet
     @IBOutlet weak var tableList: UITableView!
-    @IBOutlet weak var btnYYMM: UIButton!
-    @IBOutlet weak var btnTot: UIButton!
     @IBOutlet weak var labGrayMsg: UILabel!
     @IBOutlet weak var labCurrenctMsg: UILabel!
-    
-    @IBOutlet weak var labTotTitle: UILabel!
-    @IBOutlet weak var labYYMMpreiod: UILabel!
-    @IBOutlet weak var labNameTot: UILabel!
-    
-    @IBOutlet weak var edCountry0: UITextField!
-    @IBOutlet weak var edCountry1: UITextField!
-    @IBOutlet weak var edCountry2: UITextField!
+    @IBOutlet var btnCountry: [UIButton]!
+    @IBOutlet weak var btnYYMM: UIBarButtonItem!
+    @IBOutlet weak var btnTot: UIBarButtonItem!
     
     // common property
     private var pubClass = PubClass()
     
     // 本頁面需要的資料集
     private var dictAllData: Dictionary<String, AnyObject> = [:]
-    private var aryTableData: Array<AnyObject> = []
+    private var aryTableData: Array<AnyObject> = [] // YYMM array 資料
+    private var dictTotPriceData: Dictionary<String, String> = [:]  //sect1 加總資料
+    
+    // 記錄目前 YYMM 起始結束的 position array data
+    private var aryCurrYYMM: Array<Int>!
     
     // 其他參數
+    private var aryYYMM: Array<String> = [] // YYMM 起始 array data
     private var aryPriv: Array<String>!
-    private var aryIndexYM = [0, 23]  // YYMM 起始 position
+    private var aryIndexYM = [0, 24]  // YYMM 起始 position
     private var aryCurrCountry: Array<String> = []  // 目前選擇的國別
-    private var mPickerCountry: PickerCountry!
+    private var tagBtnCountry = 0  // 目前點取 '選擇國別' btn tag
+    private var bolReload = true // 頁面是否需要 http reload
     
     /**
      * viewDidLoad
@@ -43,24 +42,46 @@ class HistorySale: UIViewController, PickerCountryDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnYYMM.layer.cornerRadius = 5.0
-        btnTot.layer.cornerRadius = 5.0
+        // TableCell 自動調整高度
+        tableList.estimatedRowHeight = 60.0
+        tableList.rowHeight = UITableViewAutomaticDimension
         
-        // Picker 設定, 國別選擇
-        let aryEdCountry = [edCountry0, edCountry1, edCountry2]
-        
-        aryPriv = pubClass.getAppDelgVal("V_PRIV") as? Array<String>
+        // 設定 user 國別權限 array, country btn statu
+        aryPriv = pubClass.getAppDelgVal("V_PRIV") as! Array<String>
         for loopi in (0..<3) {
+            var strTitle = "--"
+            btnCountry[loopi].enabled = false
+            
             if (aryPriv.count > loopi) {
+                btnCountry[loopi].enabled = true
                 aryCurrCountry.append(aryPriv[loopi])
-                aryEdCountry[loopi].text = pubClass.getLang("countryname_" + aryPriv[loopi])
+                strTitle = pubClass.getLang("countryname_" + aryPriv[loopi])
             }
-            else {
-                aryEdCountry[loopi].text = "--"
-                aryEdCountry[loopi].enabled = false
+            
+            btnCountry[loopi].setTitle(strTitle, forState: UIControlState.Normal)
+        }
+        
+        // 產生 YYMM 起始 array data
+        let strToday = pubClass.getDevToday()
+        let strLastYYMM = pubClass.subStr(strToday, strFrom: 0, strEnd: 6)
+        var strCurrYYMM = pubClass.D_YYMM_START
+        
+        while (strLastYYMM >= strCurrYYMM) {
+            let YY = pubClass.subStr(strCurrYYMM, strFrom: 0, strEnd: 4)
+            let MM = pubClass.subStr(strCurrYYMM, strFrom: 4, strEnd: 6)
+            let intMM = Int(MM)!
+            
+            aryYYMM.append((YY + MM))
+            
+            if ((intMM + 1) > 12) {
+                strCurrYYMM = String(Int(YY)! + 1) + "01"
+            } else {
+                strCurrYYMM = YY + String(format: "%02d", (intMM + 1))
             }
         }
-
+        
+        aryYYMM = aryYYMM.reverse()
+        
         // 設定頁面語系
         self.setPageLang()
     }
@@ -69,6 +90,11 @@ class HistorySale: UIViewController, PickerCountryDelegate {
      * View DidAppear 程序
      */
     override func viewDidAppear(animated: Bool) {
+        if (!bolReload) {
+            return
+        }
+        bolReload = false
+        
         // HTTP 重新連線取得資料
         reConnHTTP()
     }
@@ -84,41 +110,79 @@ class HistorySale: UIViewController, PickerCountryDelegate {
      * 根據 YYMM 區間，重新產生 Table data source
      */
     private func chkHaveData() {
-        var dictAllCountry: Dictionary<String, AnyObject> = [:]
-        var dictTot: Dictionary<String, Dictionary<String, Float>> = [:]
-        
-        // 根據 YYMM 起始 position, 產生 user 權限國別的資料
-        for strPriv in aryPriv {
-            var aryCountryData: Array<Dictionary<String, AnyObject>> = []
-            if let aryTmp = dictAllData[strPriv] as? Array<Dictionary<String, AnyObject>> {
-                aryCountryData = aryTmp
-            }
-            
-            var aryYYMMData: Array<Dictionary<String, AnyObject>> = []
-            var fltNT: Float = 0.0
-            var fltOrg: Float = 0.0
-            let nums = aryCountryData.count
-            
-            for loopi in (aryIndexYM[0]..<aryIndexYM[1]) {
-                var dictData: Dictionary<String, AnyObject> = [:]
-
-                if (nums > 0 && nums > loopi) {
-                    dictData = aryCountryData[loopi]
-                    fltNT += Float(dictData["MM_NT"] as! String)!
-                    fltOrg += Float(dictData["MM_ORG"] as! String)!
-                }
-                
-                aryYYMMData.append(dictData)
-            }
-            
-            dictAllCountry[strPriv] = aryData
-            dictTot[strPriv] = ["NT":fltNT, "ORG":fltOrg]
-        }
- 
-        // 產生 Table data source, Table reload
+        // 根據 YYMM 起始 position, 產生 table data source
+        aryCurrYYMM = []
         aryTableData = []
-        aryTableData.append(dictCountryData)
-        aryTableData.append(dictTot)
+        var aryTot: Dictionary<String, Float32> = [:]
+        
+        for loopi in (0..<3) {
+            aryTot["NT_" + String(loopi)] = 0.0
+            aryTot["ORG_" + String(loopi)] = 0.0
+        }
+        
+        for intIndex in (aryIndexYM[0]..<(aryIndexYM[1] + 1)) {
+            aryCurrYYMM.append(intIndex)
+            
+            // 產生目前已選擇的國別的資料
+            var dictYYMMData: Dictionary<String, String> = [:]  // YYMM data
+            var dictTotData: Dictionary<String, String> = [:]  // 加總 data
+            
+            for loopi in (0..<3) {
+                let strLoopi = String(loopi)
+                
+                dictYYMMData["NT_" + strLoopi] = "--"
+                dictYYMMData["ORG_" + strLoopi] = "--"
+                dictTotData["NT_" + strLoopi] = "--"
+                dictTotData["ORG_" + strLoopi] = "--"
+                
+                if (aryCurrCountry.count > loopi) {
+                    let strCountry = aryCurrCountry[loopi]
+                    let keyNT = "NT_" + strLoopi
+                    let keyORG = "ORG_" + strLoopi
+                    
+                    let aryCountryData = dictAllData[strCountry] as! Array<Dictionary<String, AnyObject>>  // country ary
+                    let lastPosition = (aryCountryData.count - 1) // last position
+                    
+                    // 加入 YYMM data
+                    if (lastPosition >= intIndex) {
+                        let dictYYMM = aryCountryData[intIndex] as! Dictionary<String, String>
+                        
+                        dictYYMMData[keyNT] = dictYYMM["MM_NT"]
+                        dictYYMMData[keyORG] = dictYYMM["MM_ORG"]
+                        
+                        // 加總金額
+                        let fltNT = Float32(dictYYMM["MM_NT"]!)!
+                        let fltORG = Float32(dictYYMM["MM_ORG"]!)!
+                        
+                        aryTot[keyNT] = aryTot[keyNT]! + fltNT
+                        aryTot[keyORG] = aryTot[keyORG]! + fltORG
+                    }
+
+                }
+
+            }
+            
+            aryTableData.append(dictYYMMData)
+        }
+
+        // 金額加總資料重整
+        dictTotPriceData = [:]
+        
+        for loopi in (0..<3) {
+            let strLoopi = String(loopi)
+            let keyNT = "NT_" + strLoopi
+            let keyORG = "ORG_" + strLoopi
+            
+            dictTotPriceData[keyNT] = "--"
+            dictTotPriceData[keyORG] = "--"
+            
+            if (aryPriv.count > loopi) {
+                dictTotPriceData[keyNT] = String(format: "%.02f", Float32(aryTot[keyNT]!))
+                dictTotPriceData[keyORG] = String(format: "%.02f", Float32(aryTot[keyORG]!))
+            }
+        }
+        
+        // table 重整
         tableList.reloadData()
     }
     
@@ -169,7 +233,11 @@ class HistorySale: UIViewController, PickerCountryDelegate {
      * #mark: UITableView Delegate, section 內的 row 數量
      */
     func tableView(tableView: UITableView, numberOfRowsInSection section:Int) -> Int {
-        return aryTableData.count
+        if (aryTableData.count < 1) {
+            return 0
+        }
+        
+        return (section == 0) ? aryTableData.count : 1
     }
     
     /**
@@ -180,30 +248,12 @@ class HistorySale: UIViewController, PickerCountryDelegate {
             return UITableViewCell()
         }
         
-        let dictAll = aryTableData[indexPath.section]
-        let nums = aryCurrCountry.count
-        var dictItem: Dictionary<String, AnyObject> = [:]
-        
-        // 各國資料列表
+        // YYMM 資料列表
         if (indexPath.section == 0) {
             let mCell = tableView.dequeueReusableCellWithIdentifier("cellHistorySale", forIndexPath: indexPath) as! HistorySaleCell
-
-            for loopi in (0..<3) {
-                dictItem["NT_" + String(loopi)] = "--"
-                dictItem["ORG_" + String(loopi)] = "--"
-                
-                if (nums > loopi) {
-                    let aryData = dictAll[aryCurrCountry[loopi]] as! Array<AnyObject>
-                    let nums1 = aryData.count
-                    
-                    if (nums1 > indexPath.row) {
-                        let dictData = aryData[indexPath.row]
-                        dictItem["NT_" + String(loopi)] = dictData["MM_NT"]
-                        dictItem["ORG_" + String(loopi)] = dictData["MM_ORG"]
-                        dictItem["yymm"] = dictData["yymm"] as! String
-                    }
-                }
-            }
+            
+            var dictItem = aryTableData[indexPath.row] as! Dictionary<String, String>
+            dictItem["yymm"] = aryYYMM[aryCurrYYMM[indexPath.row]]
             
             mCell.initView(dictItem)
             
@@ -214,63 +264,87 @@ class HistorySale: UIViewController, PickerCountryDelegate {
         if (indexPath.section == 1) {
             let mCell = tableView.dequeueReusableCellWithIdentifier("cellHistorySaleTot", forIndexPath: indexPath) as! HistorySaleTotCell
             
-            for loopi in (0..<3) {
-                if (nums > loopi) {
-                    let aryData = dictAll[aryCurrCountry[loopi]]
-                    let dictData = aryData!![indexPath.row]
-                    
-                    dictItem["NT_" + String(loopi)] = dictData["NT"]
-                    dictItem["ORG_" + String(loopi)] = dictData["ORG"]
-                }
-                else {
-                    dictItem["NT_" + String(loopi)] = "--"
-                    dictItem["ORG_" + String(loopi)] = "--"
-                }
-            }
+            var dictItem = dictTotPriceData
+            let strYM_S = aryYYMM[aryIndexYM[0]]
+            let strYM_E = aryYYMM[aryIndexYM[1]]
             
+            dictItem["yymm"] =
+                pubClass.subStr(strYM_S, strFrom: 0, strEnd: 4) + " " +
+                pubClass.getLang("mm_" + pubClass.subStr(strYM_S, strFrom: 4, strEnd: 6)) + " ~ " +
+                pubClass.subStr(strYM_E, strFrom: 0, strEnd: 4) + " " +
+                pubClass.getLang("mm_" + pubClass.subStr(strYM_E, strFrom: 4, strEnd: 6))
+                
             mCell.initView(dictItem)
             
             return mCell
         }
         
-        
         return UITableViewCell()
     }
     
     /**
-     * #mark: UIText 'Field' Delegate
-     * 虛擬鍵盤: 點取 edField 開始輸入字元
+     * #mark: 選擇國別 PickerCountryDelegate Delegate
      */
-    func textFieldDidBeginEditing(textField: UITextField) {
-        let strCountry = aryCurrCountry[textField.tag]
-        mPickerCountry = PickerCountry(withUIField: textField, aryCountry: aryPriv, defCountry: strCountry, strTitle: pubClass.getLang("selcountry"))
-        mPickerCountry.delegate = self
+    func doneSelect(strCountry: String) {
+        aryCurrCountry[tagBtnCountry] = strCountry
+        btnCountry[tagBtnCountry].setTitle(pubClass.getLang("countryname_" + strCountry), forState: UIControlState.Normal)
+        
+        // table 重整
+        chkHaveData()
     }
     
     /**
-     * #mark: PickerCountryDelegate Delegate
+     * #mark: 選擇日期區間, PickerYMPeriodDelegate Delegate
      */
-    func doneSelect(strCountry: String, mField: UITextField) {
-        aryCurrCountry[mField.tag] = strCountry
-        mField.text = pubClass.getLang("countryname_" + strCountry)
+    func doneDateSelect(aryPosition: Array<Int>) {
+        aryIndexYM = aryPosition
+        aryIndexYM = aryIndexYM.sort()
         
-        // TODO, Table data source 重整
+        // table 重整
+        chkHaveData()
+    }
+    
+    /**
+     * act, btn Group, 點取 '選取國別'
+     */
+    @IBAction func actBtnCountry(sender: UIButton) {
+        tagBtnCountry = sender.tag
+        let strCountry = aryCurrCountry[tagBtnCountry]
+        
+        // 跳轉國別選擇 VC
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mVC = storyboard.instantiateViewControllerWithIdentifier("PickerCountry") as! PickerCountry
+        
+        mVC.aryCountry = aryPriv
+        mVC.strSelCountry = strCountry
+        mVC.delegate = self
+        
+        self.presentViewController(mVC, animated: true, completion: nil)
     }
     
     /**
      * act, btn 彈出選擇 YYMM 視窗
      */
-    @IBAction func actYYMM(sender: UIButton) {
-        edCountry0.becomeFirstResponder()
+    @IBAction func actYYMM(sender: UIBarButtonItem) {
+        // 跳轉日期區間選擇 VC
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mVC = storyboard.instantiateViewControllerWithIdentifier("PickerYMPeriod") as! PickerYMPeriod
+        
+        mVC.aryYYMM = aryYYMM
+        mVC.aryPosition = aryIndexYM
+        mVC.delegate = self
+        
+        self.presentViewController(mVC, animated: true, completion: nil)
     }
-    
+
     /**
      * act, btn, Table 滑動至 section 1
      */
-    @IBAction func actTot(sender: UIButton) {
-        
+    @IBAction func actTot(sender: UIBarButtonItem) {
+        let mIndexPath = NSIndexPath(forRow: NSNotFound, inSection: 1)
+        tableList.scrollToRowAtIndexPath(mIndexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
     }
-    
+
     /**
      * act, btn '主選單'
      */

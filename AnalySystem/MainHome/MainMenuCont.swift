@@ -77,6 +77,7 @@ class MainMenuCont: UITableViewController {
         }
 
         if (!mVC.isEqual(nil)) {
+            mVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
             self.presentViewController(mVC, animated: true, completion: nil)
             return
         }
