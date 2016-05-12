@@ -18,12 +18,12 @@ class Liability: UIViewController {
     
     // 本頁面需要的資料集
     private var dictAllData: Dictionary<String, AnyObject> = [:]
-    private var aryTableData: Array<String> = []
+    private var aryTableData: Array<Dictionary<String, AnyObject>> = []
     
     // 其他參數
     private var arySeason: Array<String>!  // YYMM array
-    private var aryLiab: Array<Int>!  // 責任額，依等級劃分, 2~4
-    private var aryLevel: Array<String>!  // Level 對應名稱
+    private var dictLiab: Dictionary<String, Int>!  // 責任額，依等級劃分, 2~4
+    private var dictLevel: Dictionary<String, String>!  // Level 對應名稱
     
     /**
      * viewDidLoad
@@ -47,7 +47,7 @@ class Liability: UIViewController {
      * 設定頁面顯示文字
      */
     private func setPageLang() {
-        
+        labCountry.text = pubClass.getLang("countryname_TW")
     }
     
     /**
@@ -57,15 +57,13 @@ class Liability: UIViewController {
         let dictTmp = dictAllData["data"] as! Dictionary<String, AnyObject>
         let dictTWData = dictTmp["TW"] as! Dictionary<String, AnyObject>
         
-        // Level 對應名稱, 目前為台灣等級名稱
-        //arySeason = dictAllData["level"] as! Array<String>
-        print(dictAllData["level"])
-        
-        // 本季 YYMM 
-        arySeason = dictTWData["level"] as! Array<String>
-        
-        // 責任額，依等級劃分, 2~4
-        print(dictTWData["liability"]!)
+        // 目前為台灣資料
+        dictLevel = dictAllData["level"] as! Dictionary<String, String>
+        arySeason = dictTWData["season"] as! Array<String>
+        dictLiab = dictTWData["liability"] as! Dictionary<String, Int>
+        aryTableData = dictTWData["user"] as! Array<Dictionary<String, AnyObject>>
+    
+        tableList.reloadData()
     }
     
     /**
@@ -127,24 +125,40 @@ class Liability: UIViewController {
             return UITableViewCell()
         }
         
-        return UITableViewCell()
+        // 產生 Item data, 設定 cell field 需要的　value
+        var dictItem: Dictionary<String, AnyObject> = [:]
+        let dictOrg = aryTableData[indexPath.row] as Dictionary<String, AnyObject>
         
-        // 產生 Item data
-        /*
-        let strOffice = aryTableData[indexPath.row]
-        let dictBranchdata = dictAllData[strBranch]![isToday] as! Dictionary<String, AnyObject>
-        var dictItem = dictBranchdata[strOffice] as! Dictionary<String, AnyObject>
+        dictItem["name"] = dictOrg["description"]
+        dictItem["sdate"] = dictOrg["up_date"]
+        dictItem["degree"] = dictLevel[dictOrg["level"] as! String]
+        dictItem["season"] = arySeason
         
-        dictItem["branch"] = strBranch
-        dictItem["office"] = strOffice
-        dictItem["isUnit"] = isPriceUnit
+        // 責任額差值與加總
+        var totM = 0
+        var totR = 0
         
-        let mCell = tableView.dequeueReusableCellWithIdentifier("cellBranchSale", forIndexPath: indexPath) as! BranchSaleCell
+        for loopi in (0..<3) {
+            let strLoop = String(loopi)
+            let intLiab = dictLiab[dictOrg["L" + strLoop] as! String]!
+            let intM = Int(dictOrg["M" + strLoop] as! String)!
+            let intR = intM - intLiab
+            
+            totM += intM
+            totR += intR
+            dictItem["M" + strLoop] = intM
+            dictItem["R" + strLoop] = intR
+        }
+        
+        dictItem["tot_M"] = totM
+        dictItem["tot_R"] = totR
+        
+        
+        let mCell = tableView.dequeueReusableCellWithIdentifier("cellLiability", forIndexPath: indexPath) as! LiabilityCell
         
         mCell.initView(dictItem)
         
         return mCell
-        */
     }
     
     /**

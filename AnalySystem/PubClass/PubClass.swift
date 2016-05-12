@@ -541,14 +541,18 @@ class PubClass {
             var price = tmpPrice
             var strRS = "0"
             
-            if (bolUnit == true) {
-                price = (price / 10000)
-            }
-            
             let objFMT = NSNumberFormatter()
             objFMT.numberStyle = .DecimalStyle
             objFMT.roundingMode = NSNumberFormatterRoundingMode.RoundDown
             objFMT.maximumFractionDigits = 0
+            objFMT.minimumFractionDigits = 0
+            
+            if (bolUnit == true) {
+                price = (price / 10000)
+                
+                objFMT.maximumFractionDigits = 2
+                objFMT.minimumFractionDigits = 2
+            }
             
             strRS = objFMT.stringFromNumber(price)!
             

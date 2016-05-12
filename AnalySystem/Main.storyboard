@@ -1175,7 +1175,7 @@
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="skp-qU-gDo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="140" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="skp-qU-gDo">
                                 <rect key="frame" x="-2" y="97" width="324" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1264,74 +1264,74 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-Ha-Ee4" userLabel="price0">
-                                                    <rect key="frame" x="47" y="89" width="48" height="14"/>
+                                                    <rect key="frame" x="44" y="89" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="WOw-uA-RW9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC8-LA-scs" userLabel="price1">
-                                                    <rect key="frame" x="118" y="89" width="48" height="14"/>
+                                                    <rect key="frame" x="115" y="89" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="d0o-nf-Ug8"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-rl-4Ca" userLabel="price2">
-                                                    <rect key="frame" x="189" y="89" width="48" height="14"/>
+                                                    <rect key="frame" x="186" y="89" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="Q2f-3X-5hD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-Lm-qYP" userLabel="tot0">
-                                                    <rect key="frame" x="256" y="89" width="52" height="14"/>
+                                                    <rect key="frame" x="252" y="89" width="56" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="1Zh-qE-KMn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqt-bz-v0b" userLabel="price0">
-                                                    <rect key="frame" x="47" y="105" width="48" height="14"/>
+                                                    <rect key="frame" x="44" y="105" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="dEU-Jk-0PN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g46-6F-aTn" userLabel="price1">
-                                                    <rect key="frame" x="118" y="105" width="48" height="14"/>
+                                                    <rect key="frame" x="115" y="105" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="xs7-5h-UWy"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-Vs-a2N" userLabel="price2">
-                                                    <rect key="frame" x="189" y="105" width="48" height="14"/>
+                                                    <rect key="frame" x="186" y="105" width="51" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="idN-NG-MaL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,999.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwq-St-Nhy" userLabel="tot0">
-                                                    <rect key="frame" x="256" y="105" width="52" height="14"/>
+                                                    <rect key="frame" x="252" y="105" width="56" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="bXu-Qs-1u7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1388,9 +1388,16 @@
                                             <outlet property="labR2" destination="gUs-Vs-a2N" id="lNB-9T-5iT"/>
                                             <outlet property="labRTot" destination="nwq-St-Nhy" id="2Ks-u8-rvG"/>
                                             <outlet property="labSdate" destination="ABE-6G-DDu" id="1o0-MR-Bc8"/>
+                                            <outletCollection property="labGrpYYMM" destination="GL2-ak-2mn" id="bSP-gp-JRo"/>
+                                            <outletCollection property="labGrpYYMM" destination="zrY-aL-9MI" id="vgl-yo-y3l"/>
+                                            <outletCollection property="labGrpYYMM" destination="u0D-uf-Akx" id="7Gh-Fl-SEV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U7H-Kg-zZj" id="tFm-m8-Qxf"/>
+                                    <outlet property="delegate" destination="U7H-Kg-zZj" id="Atz-4N-Skn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
