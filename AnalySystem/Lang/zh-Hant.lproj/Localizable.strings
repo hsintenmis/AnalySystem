@@ -84,3 +84,4 @@
 "datatranplzwait" = "資料傳送中，請稍後...";
 "selcountry" = "選擇國家";
 "select_ok" = "選擇完成";
+"privlimitmsg" = "無權限使用該功能!";

@@ -38,6 +38,7 @@ class BranchSale: UIViewController {
     private var strBranch = "all"  // all, TW, MY
     private var isToday = "Y"  // Y=今日, N=前月
     private var isPriceUnit = false  // 是否切換 '萬元'
+    private var aryCalDate: Array<String>!
 
     /**
      * viewDidLoad
@@ -93,6 +94,9 @@ class BranchSale: UIViewController {
             return
         }
         
+        // 統計日期文字
+        labCalDate.text = aryCalDate[0]
+        
         // tableview reload
         tableList.reloadData()
     }
@@ -144,6 +148,11 @@ class BranchSale: UIViewController {
             tmpAllData["all"] = dictData["tot"]
             tmpAllData["TW"] = dictTW
             tmpAllData["MY"] = dictMY
+            
+            // 統計日期文字設定到 array
+            let strDate0 = self.pubClass.formatDateWithStr(dictData["today"] as! String, type: 8)
+            let strDate1 = self.pubClass.formatDateWithStr(dictData["premonth"] as! String, type: 8)
+            self.aryCalDate = [strDate0, strDate1]
             
             self.dictAllData = tmpAllData
             self.chkHaveData()
@@ -202,6 +211,7 @@ class BranchSale: UIViewController {
      */
     @IBAction func actSegmToday(sender: UISegmentedControl) {
         isToday = (sender.selectedSegmentIndex == 0) ? "Y" : "N"
+        labCalDate.text = aryCalDate[sender.selectedSegmentIndex]
         tableList.reloadData()
     }
     

@@ -21,8 +21,6 @@ class MainMenuCont: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
         // 設定頁面顯示文字
         self.setPageLang()
     }
@@ -59,7 +57,8 @@ class MainMenuCont: UITableViewController {
     }
     
     /**
-     * act, button group, 選單 button 點取
+     * act, button group, 即時業績/歷史業績
+     * 跳轉 storyboard 方式
      */
     @IBAction func actBtnGrpMenu(sender: UIButton) {
         let strIdentName = sender.restorationIdentifier
@@ -79,6 +78,38 @@ class MainMenuCont: UITableViewController {
         if (!mVC.isEqual(nil)) {
             mVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
             self.presentViewController(mVC, animated: true, completion: nil)
+            return
+        }
+        
+        return
+    }
+    
+    /**
+     * act, button group, TW 權限
+     */
+    @IBAction func actGrpBtnTW(sender: UIButton) {
+        // 檢查'TW'權限
+        let aryPriv = pubClass.getAppDelgVal("V_PRIV") as! Array<String>
+        var bolRS = false
+        
+        for strPriv in aryPriv {
+            if (strPriv == "TW") {
+                bolRS = true
+                break;
+            }
+        }
+        
+        if (!bolRS) {
+            pubClass.popIsee(self, Msg: pubClass.getLang("privlimitmsg"))
+            return
+        }
+        
+        // 跳轉對應 class
+        let strIdentName = sender.restorationIdentifier
+        
+        if (strIdentName == "btnMenuLiability") {
+            self.performSegueWithIdentifier("Liability", sender: nil)
+            
             return
         }
         
