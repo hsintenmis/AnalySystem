@@ -29,13 +29,19 @@ enum myColor: String {
     /** #FFFFFF */
     case White = "FFFFFF"
     case Red = "FFCCCC"
+    case RedDark = "990000"
     case Gray = "C0C0C0"
     case Sliver = "F0F0F0"
     case Blue = "66CCFF"
     case Black = "000000"
     case Green = "99CC33"
+    case GreenDark = "336633"
     case Gold = "FFCC66"
     case BlueSel = "0066FF"
+    case GRAY333 = "303030"
+    case GRAY666 = "606060"
+    case GRAY999 = "909090"
+    case GRAYEEE = "E0E0E0"
 }
 
 /**
@@ -345,6 +351,13 @@ class PubClass {
                 
                 // 檢查 content ['msg'] 是否有訊息
                 if let errTmp = dictRespon["content"]?["msg"] as? String {
+                    if (errTmp.characters.count > 0) {
+                        dictRS["msg"] = errTmp
+                    }
+                }
+                
+                // root 是否也有 'msg'
+                if let errTmp = dictRespon["msg"] as? String {
                     if (errTmp.characters.count > 0) {
                         dictRS["msg"] = errTmp
                     }

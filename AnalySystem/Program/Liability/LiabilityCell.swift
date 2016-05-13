@@ -47,14 +47,29 @@ class LiabilityCell: UITableViewCell {
         
         for loopi in (0..<3) {
             let str_i = String(loopi)
+            let flt_R = dictItem["R" + str_i] as! Float32
+            
             aryLab_M[loopi].text = pubClass.fmtDelPoint(String(dictItem["M" + str_i]!), bolUnit: true)
-            aryLab_R[loopi].text = pubClass.fmtDelPoint(String(dictItem["R" + str_i]!), bolUnit: true)
+            aryLab_R[loopi].text = pubClass.fmtDelPoint(String(flt_R), bolUnit: true)
             
             labGrpYYMM[loopi].text = aryYYMM[loopi]
+            
+            if (flt_R > 0) {
+                aryLab_M[loopi].textColor = pubClass.ColorHEX(myColor.GreenDark.rawValue)
+            } else {
+                aryLab_M[loopi].textColor = pubClass.ColorHEX(myColor.RedDark.rawValue)
+            }
         }
         
         labMTot.text = pubClass.fmtDelPoint(String(dictItem["tot_M"]!), bolUnit: true)
         labRTot.text = pubClass.fmtDelPoint(String(dictItem["tot_R"]!), bolUnit: true)
+        
+        if ((dictItem["tot_R"] as! Float32) > 0) {
+            labMTot.textColor = pubClass.ColorHEX(myColor.GreenDark.rawValue)
+        } else {
+            labMTot.textColor = pubClass.ColorHEX(myColor.RedDark.rawValue)
+        }
+
     }
     
 }

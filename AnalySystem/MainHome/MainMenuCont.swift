@@ -113,6 +113,12 @@ class MainMenuCont: UITableViewController {
             return
         }
         
+        if (strIdentName == "btnMenuAgentTW") {
+            self.performSegueWithIdentifier("AgentTW", sender: nil)
+            
+            return
+        }
+        
         return
     }
     

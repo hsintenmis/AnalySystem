@@ -85,3 +85,6 @@
 "selcountry" = "選擇國家";
 "select_ok" = "選擇完成";
 "privlimitmsg" = "無權限使用該功能!";
+"err_searchmax" = "資料太多, 請重設搜尋條件!";
+"err_checknodata" = "搜尋結果無資料 ...";
+"nodownlinedata" = "無下線資料 ...";
