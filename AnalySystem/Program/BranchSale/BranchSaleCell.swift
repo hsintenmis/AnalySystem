@@ -55,15 +55,24 @@ class BranchSaleCell: UITableViewCell {
      * 初始與設定 Cell
      */
     func initView(dictItem: Dictionary<String, AnyObject>!) {
-        let strBranch = dictItem["branch"] as! String
+        var strBranch = dictItem["branch"] as! String
         let strFontCode = (strBranch == "all") ? "countryname_" : ("branch" + strBranch + "_")
+
+        strBranch = pubClass.getLang(strFontCode + (dictItem["office"] as! String))
         
-        labBranch.text = pubClass.getLang(strFontCode + (dictItem["office"] as! String))
-        
+        var bolNoData = true
         for strField in aryFiledKey {
-            let strPrice = dictItem[strField] as! String
+            var strPrice = "--"
+            if let strTmp = dictItem[strField] as? String {
+                strPrice = strTmp
+                bolNoData = false
+            }
+            
             dictField[strField]!.text = pubClass.fmtDelPoint(strPrice, bolUnit: dictItem["isUnit"] as! Bool)
         }
+        
+        labBranch.text = strBranch + ((bolNoData) ? " " + pubClass.getLang("branchsalenodatamsg") : "")
+        
     }
     
 }

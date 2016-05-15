@@ -185,7 +185,12 @@ class BranchSale: UIViewController {
         // 產生 Item data
         let strOffice = aryTableData[indexPath.row]
         let dictBranchdata = dictAllData[strBranch]![isToday] as! Dictionary<String, AnyObject>
-        var dictItem = dictBranchdata[strOffice] as! Dictionary<String, AnyObject>
+        
+        var dictItem: Dictionary<String, AnyObject> = [:]
+        
+        if let dictTmp = dictBranchdata[strOffice] as? Dictionary<String, AnyObject> {
+            dictItem = dictTmp
+        }
         
         dictItem["branch"] = strBranch
         dictItem["office"] = strOffice

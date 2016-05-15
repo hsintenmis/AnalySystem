@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42CE5D061CE8C8C600992929 /* AreaSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE5D051CE8C8C600992929 /* AreaSale.swift */; };
+		42CE5D081CE8C92C00992929 /* AreaSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE5D071CE8C92C00992929 /* AreaSaleCell.swift */; };
 		D752C2F91CE01F4C001F97DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D752C2F81CE01F4C001F97DB /* Images.xcassets */; };
 		D752C2FF1CE02061001F97DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C2FD1CE02061001F97DB /* AppDelegate.swift */; };
 		D752C3021CE02091001F97DB /* MainLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C3011CE02091001F97DB /* MainLogin.swift */; };
@@ -93,6 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42CE5D051CE8C8C600992929 /* AreaSale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaSale.swift; path = Program/AreaSale/AreaSale.swift; sourceTree = "<group>"; };
+		42CE5D071CE8C92C00992929 /* AreaSaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaSaleCell.swift; path = Program/AreaSale/AreaSaleCell.swift; sourceTree = "<group>"; };
 		D752C2DA1CE01968001F97DB /* AnalySystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalySystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D752C2F81CE01F4C001F97DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D752C2FC1CE02061001F97DB /* AnalySystem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalySystem-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42CE5D041CE8C88400992929 /* AreaSale */ = {
+			isa = PBXGroup;
+			children = (
+				42CE5D051CE8C8C600992929 /* AreaSale.swift */,
+				42CE5D071CE8C92C00992929 /* AreaSaleCell.swift */,
+			);
+			name = AreaSale;
+			sourceTree = "<group>";
+		};
 		42EBA69D1CE3795200B005D9 /* TopRank */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +377,7 @@
 				D7F8013E1CE471F7001630A4 /* Liability */,
 				D7C786B31CE562CB000A9C7A /* SearchAgent */,
 				D7C786B61CE5AF84000A9C7A /* AgentTW */,
+				42CE5D041CE8C88400992929 /* AreaSale */,
 			);
 			name = Program;
 			sourceTree = "<group>";
@@ -532,6 +546,7 @@
 				D7F801371CE41728001630A4 /* TopRankColtView.swift in Sources */,
 				D7F801421CE47F46001630A4 /* LiabilityCell.swift in Sources */,
 				D7F105E81CE1BE2A0054C895 /* PickerCountry.swift in Sources */,
+				42CE5D061CE8C8C600992929 /* AreaSale.swift in Sources */,
 				D752C3321CE032C7001F97DB /* FileMang.swift in Sources */,
 				D752C3361CE032C7001F97DB /* NoDataView.swift in Sources */,
 				D752C32F1CE032C7001F97DB /* CalendarCellData.swift in Sources */,
@@ -548,6 +563,7 @@
 				D7C786BA1CE5B2B8000A9C7A /* AgentTWCell.swift in Sources */,
 				D7C786B51CE56BCE000A9C7A /* SearchAgentCell.swift in Sources */,
 				D752C3021CE02091001F97DB /* MainLogin.swift in Sources */,
+				42CE5D081CE8C92C00992929 /* AreaSaleCell.swift in Sources */,
 				D752C2FF1CE02061001F97DB /* AppDelegate.swift in Sources */,
 				D7C786BE1CE5C893000A9C7A /* AgentTWDetailCell.swift in Sources */,
 			);

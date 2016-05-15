@@ -87,3 +87,5 @@
 "privlimitmsg" = "無權限使用該功能!";
 "err_searchmax" = "資料太多, 請重設搜尋條件!";
 "err_checknodata" = "搜尋結果無資料 ...";
+"branchsalenodatamsg" = "(業績資料尚未回傳)";
+"nosalethisyear" = "無資料";
