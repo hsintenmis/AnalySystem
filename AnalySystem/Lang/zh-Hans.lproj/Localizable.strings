@@ -89,3 +89,4 @@
 "err_checknodata" = "搜尋結果無資料 ...";
 "branchsalenodatamsg" = "(業績資料尚未回傳)";
 "nosalethisyear" = "無資料";
+"fmt_rankname" = "第 %@ 名";

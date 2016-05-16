@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		42CE5D061CE8C8C600992929 /* AreaSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE5D051CE8C8C600992929 /* AreaSale.swift */; };
 		42CE5D081CE8C92C00992929 /* AreaSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CE5D071CE8C92C00992929 /* AreaSaleCell.swift */; };
+		D715680E1CE959510001BF84 /* arrow_left02.png in Resources */ = {isa = PBXBuildFile; fileRef = D715680C1CE959510001BF84 /* arrow_left02.png */; };
+		D715680F1CE959510001BF84 /* arrow_right02.png in Resources */ = {isa = PBXBuildFile; fileRef = D715680D1CE959510001BF84 /* arrow_right02.png */; };
+		D71568121CE95CDA0001BF84 /* PdSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568111CE95CDA0001BF84 /* PdSale.swift */; };
+		D71568141CE95E510001BF84 /* CountryColtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568131CE95E510001BF84 /* CountryColtView.swift */; };
+		D71568161CE960430001BF84 /* PdSalePager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568151CE960430001BF84 /* PdSalePager.swift */; };
+		D71568181CE963800001BF84 /* PdSaleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568171CE963800001BF84 /* PdSaleTable.swift */; };
+		D715681A1CE9639B0001BF84 /* PdSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568191CE9639B0001BF84 /* PdSaleCell.swift */; };
 		D752C2F91CE01F4C001F97DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D752C2F81CE01F4C001F97DB /* Images.xcassets */; };
 		D752C2FF1CE02061001F97DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C2FD1CE02061001F97DB /* AppDelegate.swift */; };
 		D752C3021CE02091001F97DB /* MainLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C3011CE02091001F97DB /* MainLogin.swift */; };
@@ -97,6 +104,13 @@
 /* Begin PBXFileReference section */
 		42CE5D051CE8C8C600992929 /* AreaSale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaSale.swift; path = Program/AreaSale/AreaSale.swift; sourceTree = "<group>"; };
 		42CE5D071CE8C92C00992929 /* AreaSaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AreaSaleCell.swift; path = Program/AreaSale/AreaSaleCell.swift; sourceTree = "<group>"; };
+		D715680C1CE959510001BF84 /* arrow_left02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left02.png; sourceTree = "<group>"; };
+		D715680D1CE959510001BF84 /* arrow_right02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right02.png; sourceTree = "<group>"; };
+		D71568111CE95CDA0001BF84 /* PdSale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSale.swift; path = Program/PdSale/PdSale.swift; sourceTree = "<group>"; };
+		D71568131CE95E510001BF84 /* CountryColtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryColtView.swift; path = Program/CountryColtView.swift; sourceTree = "<group>"; };
+		D71568151CE960430001BF84 /* PdSalePager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSalePager.swift; path = Program/PdSale/PdSalePager.swift; sourceTree = "<group>"; };
+		D71568171CE963800001BF84 /* PdSaleTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSaleTable.swift; path = Program/PdSale/PdSaleTable.swift; sourceTree = "<group>"; };
+		D71568191CE9639B0001BF84 /* PdSaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSaleCell.swift; path = Program/PdSale/PdSaleCell.swift; sourceTree = "<group>"; };
 		D752C2DA1CE01968001F97DB /* AnalySystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalySystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D752C2F81CE01F4C001F97DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D752C2FC1CE02061001F97DB /* AnalySystem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalySystem-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -220,6 +234,17 @@
 			name = TopRank;
 			sourceTree = "<group>";
 		};
+		D71568101CE95CAA0001BF84 /* PdSale */ = {
+			isa = PBXGroup;
+			children = (
+				D71568111CE95CDA0001BF84 /* PdSale.swift */,
+				D71568151CE960430001BF84 /* PdSalePager.swift */,
+				D71568171CE963800001BF84 /* PdSaleTable.swift */,
+				D71568191CE9639B0001BF84 /* PdSaleCell.swift */,
+			);
+			name = PdSale;
+			sourceTree = "<group>";
+		};
 		D752C2D11CE01968001F97DB = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +326,8 @@
 		D752C33D1CE04170001F97DB /* pict */ = {
 			isa = PBXGroup;
 			children = (
+				D715680C1CE959510001BF84 /* arrow_left02.png */,
+				D715680D1CE959510001BF84 /* arrow_right02.png */,
 				D752C33E1CE04170001F97DB /* akregator_256.png */,
 				D752C33F1CE04170001F97DB /* applogo.png */,
 				D752C3401CE04170001F97DB /* arrow_left.png */,
@@ -371,6 +398,7 @@
 		D7F105D41CE169820054C895 /* Program */ = {
 			isa = PBXGroup;
 			children = (
+				D71568131CE95E510001BF84 /* CountryColtView.swift */,
 				D7F105D51CE169910054C895 /* BranchSale */,
 				D7F105DE1CE195000054C895 /* HistorySale */,
 				42EBA69D1CE3795200B005D9 /* TopRank */,
@@ -378,6 +406,7 @@
 				D7C786B31CE562CB000A9C7A /* SearchAgent */,
 				D7C786B61CE5AF84000A9C7A /* AgentTW */,
 				42CE5D041CE8C88400992929 /* AreaSale */,
+				D71568101CE95CAA0001BF84 /* PdSale */,
 			);
 			name = Program;
 			sourceTree = "<group>";
@@ -509,6 +538,7 @@
 				D752C3851CE04170001F97DB /* menu_icon3_256.png in Resources */,
 				D752C3711CE04170001F97DB /* config_256.png in Resources */,
 				D752C3811CE04170001F97DB /* menu_icon1_256.png in Resources */,
+				D715680E1CE959510001BF84 /* arrow_left02.png in Resources */,
 				D752C37E1CE04170001F97DB /* loginicon.png in Resources */,
 				D752C3731CE04170001F97DB /* ic_menu_copy_holo_light.png in Resources */,
 				D752C3901CE04170001F97DB /* menutotsale.png in Resources */,
@@ -521,6 +551,7 @@
 				D752C3141CE02D31001F97DB /* zh-Hant.lproj in Resources */,
 				D752C3921CE04170001F97DB /* planner_256.png in Resources */,
 				D752C30A1CE02B21001F97DB /* Main.storyboard in Resources */,
+				D715680F1CE959510001BF84 /* arrow_right02.png in Resources */,
 				D752C3931CE04170001F97DB /* testimg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,21 +568,26 @@
 				D7C786B81CE5AFA0000A9C7A /* AgentTW.swift in Sources */,
 				D752C3351CE032C7001F97DB /* KBNavyBar.swift in Sources */,
 				D7F105D91CE169EA0054C895 /* BranchSale.swift in Sources */,
+				D71568141CE95E510001BF84 /* CountryColtView.swift in Sources */,
 				D752C3341CE032C7001F97DB /* JSONClass.swift in Sources */,
 				D7F8013D1CE46229001630A4 /* TopRankDetailCell.swift in Sources */,
+				D71568161CE960430001BF84 /* PdSalePager.swift in Sources */,
 				D7F105DD1CE16D670054C895 /* BranchSaleCell.swift in Sources */,
 				D7F8013B1CE457AD001630A4 /* TopRankDetail.swift in Sources */,
 				D7F4EAF61CE2DF15007D6926 /* PickerYMPeriod.swift in Sources */,
 				D7F105E41CE1AE140054C895 /* HistorySaleCell.swift in Sources */,
+				D71568121CE95CDA0001BF84 /* PdSale.swift in Sources */,
 				D7F801371CE41728001630A4 /* TopRankColtView.swift in Sources */,
 				D7F801421CE47F46001630A4 /* LiabilityCell.swift in Sources */,
 				D7F105E81CE1BE2A0054C895 /* PickerCountry.swift in Sources */,
 				42CE5D061CE8C8C600992929 /* AreaSale.swift in Sources */,
 				D752C3321CE032C7001F97DB /* FileMang.swift in Sources */,
+				D71568181CE963800001BF84 /* PdSaleTable.swift in Sources */,
 				D752C3361CE032C7001F97DB /* NoDataView.swift in Sources */,
 				D752C32F1CE032C7001F97DB /* CalendarCellData.swift in Sources */,
 				D7F801391CE41D75001630A4 /* ColtViewCell.swift in Sources */,
 				D7F105E61CE1AEC30054C895 /* HistorySaleTotCell.swift in Sources */,
+				D715681A1CE9639B0001BF84 /* PdSaleCell.swift in Sources */,
 				D752C3951CE06F62001F97DB /* MainMenu.swift in Sources */,
 				D752C3971CE06F73001F97DB /* MainMenuCont.swift in Sources */,
 				D752C33A1CE032C7001F97DB /* PubClass.swift in Sources */,
