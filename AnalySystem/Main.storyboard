@@ -432,7 +432,7 @@
         <!--集團行事曆-->
         <scene sceneID="a2z-Yr-arV">
             <objects>
-                <viewController title="集團行事曆" id="bVw-MJ-Lqw" sceneMemberID="viewController">
+                <viewController title="集團行事曆" id="bVw-MJ-Lqw" customClass="Calendar" customModule="AnalySystem" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hvj-dn-VuW"/>
                         <viewControllerLayoutGuide type="bottom" id="SHL-cs-c6K"/>
@@ -457,7 +457,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="主選單" id="f5Q-6A-WlQ">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="actBack:" destination="U7H-Kg-zZj" id="ODY-FO-ITL"/>
+                                                <action selector="actBack:" destination="bVw-MJ-Lqw" id="Txa-pJ-1zx"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -473,7 +473,7 @@
                                 <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                 <state key="normal" image="arrow_left02.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="btnCalendarNext" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-s7-2Lj" userLabel="btnNext">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="btnCalendarNext" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-s7-2Lj" userLabel="btnNext">
                                 <rect key="frame" x="277" y="69" width="40" height="30"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -668,6 +668,14 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="labMM" destination="Zh4-Im-FZu" id="6Kq-EH-g9U"/>
+                        <outlet property="labMMDD" destination="z2d-Yt-D8I" id="Uk0-r0-nbT"/>
+                        <outlet property="labYY" destination="MUC-q7-k2w" id="agm-tc-KG1"/>
+                        <outlet property="tableList" destination="ei3-Sj-ZUW" id="0T0-rz-CwK"/>
+                        <outletCollection property="btnGrpArrow" destination="ZYP-C7-4dh" collectionClass="NSMutableArray" id="V4k-gX-J1l"/>
+                        <outletCollection property="btnGrpArrow" destination="Ib8-s7-2Lj" collectionClass="NSMutableArray" id="yUn-bu-Kye"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFj-8J-SCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -933,6 +941,9 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     <state key="normal" image="calendar_128.png"/>
+                                                    <connections>
+                                                        <segue destination="bVw-MJ-Lqw" kind="presentation" identifier="Calendar" modalTransitionStyle="crossDissolve" id="TcU-WL-Hl0"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1123,7 +1134,7 @@
                                     <inset key="sectionInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellColtView" id="afM-QZ-b2c" customClass="ColtViewCell" customModule="AnalySystem" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCountryColt" id="afM-QZ-b2c" customClass="CountryColtCell" customModule="AnalySystem" customModuleProvider="target">
                                         <rect key="frame" x="2" y="3" width="85" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1583,7 +1594,7 @@
                                     <constraint firstAttribute="height" constant="24" id="VZV-gE-buj"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="TopRankColtView" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-lz-qCT" customClass="TopRankColtView" customModule="AnalySystem" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="TopRankColtView" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-lz-qCT" customClass="CountryColtView" customModule="AnalySystem" customModuleProvider="target">
                                 <rect key="frame" x="22" y="67" width="276" height="35"/>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1596,7 +1607,7 @@
                                     <inset key="sectionInset" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellColtView" id="xqg-99-9YT" customClass="ColtViewCell" customModule="AnalySystem" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCountryColt" id="xqg-99-9YT" customClass="CountryColtCell" customModule="AnalySystem" customModuleProvider="target">
                                         <rect key="frame" x="2" y="3" width="85" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

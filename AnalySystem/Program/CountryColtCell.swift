@@ -8,6 +8,6 @@ import UIKit
 /**
  * 經銷商業績排行主頁面, 上方國別選擇 CollectView UICollectionView Cell
  */
-class ColtViewCell: UICollectionViewCell {
+class CountryColtCell: UICollectionViewCell {
     @IBOutlet weak var labName: UILabel!
 }

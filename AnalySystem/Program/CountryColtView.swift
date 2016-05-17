@@ -59,7 +59,7 @@ class CountryColtView: UICollectionView, UICollectionViewDataSource, UICollectio
      */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let mCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellColtView", forIndexPath: indexPath) as! ColtViewCell
+        let mCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellCountryColt", forIndexPath: indexPath) as! CountryColtCell
         let strCountry = aryAllData[indexPath.row]
         
         mCell.labName.text = pubClass.getLang("countryname_" + strCountry)

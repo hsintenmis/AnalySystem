@@ -16,6 +16,9 @@
 		D71568161CE960430001BF84 /* PdSalePager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568151CE960430001BF84 /* PdSalePager.swift */; };
 		D71568181CE963800001BF84 /* PdSaleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568171CE963800001BF84 /* PdSaleTable.swift */; };
 		D715681A1CE9639B0001BF84 /* PdSaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71568191CE9639B0001BF84 /* PdSaleCell.swift */; };
+		D72720A61CEAA7BB00D88DB4 /* CountryColtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72720A51CEAA7BB00D88DB4 /* CountryColtCell.swift */; };
+		D72720A91CEAA9C400D88DB4 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72720A81CEAA9C400D88DB4 /* Calendar.swift */; };
+		D72720AB1CEAAB4F00D88DB4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72720AA1CEAAB4F00D88DB4 /* CalendarView.swift */; };
 		D752C2F91CE01F4C001F97DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D752C2F81CE01F4C001F97DB /* Images.xcassets */; };
 		D752C2FF1CE02061001F97DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C2FD1CE02061001F97DB /* AppDelegate.swift */; };
 		D752C3021CE02091001F97DB /* MainLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D752C3011CE02091001F97DB /* MainLogin.swift */; };
@@ -93,8 +96,6 @@
 		D7F4EAF61CE2DF15007D6926 /* PickerYMPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4EAF51CE2DF15007D6926 /* PickerYMPeriod.swift */; };
 		D7F801331CE412A9001630A4 /* TopRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F801321CE412A9001630A4 /* TopRank.swift */; };
 		D7F801351CE414FB001630A4 /* TopRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F801341CE414FB001630A4 /* TopRankCell.swift */; };
-		D7F801371CE41728001630A4 /* TopRankColtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F801361CE41728001630A4 /* TopRankColtView.swift */; };
-		D7F801391CE41D75001630A4 /* ColtViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F801381CE41D75001630A4 /* ColtViewCell.swift */; };
 		D7F8013B1CE457AD001630A4 /* TopRankDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8013A1CE457AD001630A4 /* TopRankDetail.swift */; };
 		D7F8013D1CE46229001630A4 /* TopRankDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8013C1CE46229001630A4 /* TopRankDetailCell.swift */; };
 		D7F801401CE4720B001630A4 /* Liability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F8013F1CE4720B001630A4 /* Liability.swift */; };
@@ -111,6 +112,9 @@
 		D71568151CE960430001BF84 /* PdSalePager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSalePager.swift; path = Program/PdSale/PdSalePager.swift; sourceTree = "<group>"; };
 		D71568171CE963800001BF84 /* PdSaleTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSaleTable.swift; path = Program/PdSale/PdSaleTable.swift; sourceTree = "<group>"; };
 		D71568191CE9639B0001BF84 /* PdSaleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdSaleCell.swift; path = Program/PdSale/PdSaleCell.swift; sourceTree = "<group>"; };
+		D72720A51CEAA7BB00D88DB4 /* CountryColtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryColtCell.swift; path = Program/CountryColtCell.swift; sourceTree = "<group>"; };
+		D72720A81CEAA9C400D88DB4 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calendar.swift; path = Program/Calendar/Calendar.swift; sourceTree = "<group>"; };
+		D72720AA1CEAAB4F00D88DB4 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarView.swift; path = Program/Calendar/CalendarView.swift; sourceTree = "<group>"; };
 		D752C2DA1CE01968001F97DB /* AnalySystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalySystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D752C2F81CE01F4C001F97DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D752C2FC1CE02061001F97DB /* AnalySystem-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalySystem-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -193,8 +197,6 @@
 		D7F4EAF51CE2DF15007D6926 /* PickerYMPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerYMPeriod.swift; sourceTree = "<group>"; };
 		D7F801321CE412A9001630A4 /* TopRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRank.swift; path = Program/TopRank/TopRank.swift; sourceTree = "<group>"; };
 		D7F801341CE414FB001630A4 /* TopRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRankCell.swift; path = Program/TopRank/TopRankCell.swift; sourceTree = "<group>"; };
-		D7F801361CE41728001630A4 /* TopRankColtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRankColtView.swift; path = Program/TopRank/TopRankColtView.swift; sourceTree = "<group>"; };
-		D7F801381CE41D75001630A4 /* ColtViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColtViewCell.swift; path = Program/TopRank/ColtViewCell.swift; sourceTree = "<group>"; };
 		D7F8013A1CE457AD001630A4 /* TopRankDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRankDetail.swift; path = Program/TopRank/TopRankDetail.swift; sourceTree = "<group>"; };
 		D7F8013C1CE46229001630A4 /* TopRankDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopRankDetailCell.swift; path = Program/TopRank/TopRankDetailCell.swift; sourceTree = "<group>"; };
 		D7F8013F1CE4720B001630A4 /* Liability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Liability.swift; path = Program/Liability/Liability.swift; sourceTree = "<group>"; };
@@ -226,8 +228,6 @@
 			children = (
 				D7F801321CE412A9001630A4 /* TopRank.swift */,
 				D7F801341CE414FB001630A4 /* TopRankCell.swift */,
-				D7F801361CE41728001630A4 /* TopRankColtView.swift */,
-				D7F801381CE41D75001630A4 /* ColtViewCell.swift */,
 				D7F8013A1CE457AD001630A4 /* TopRankDetail.swift */,
 				D7F8013C1CE46229001630A4 /* TopRankDetailCell.swift */,
 			);
@@ -243,6 +243,15 @@
 				D71568191CE9639B0001BF84 /* PdSaleCell.swift */,
 			);
 			name = PdSale;
+			sourceTree = "<group>";
+		};
+		D72720A71CEAA95900D88DB4 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D72720A81CEAA9C400D88DB4 /* Calendar.swift */,
+				D72720AA1CEAAB4F00D88DB4 /* CalendarView.swift */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		D752C2D11CE01968001F97DB = {
@@ -399,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				D71568131CE95E510001BF84 /* CountryColtView.swift */,
+				D72720A51CEAA7BB00D88DB4 /* CountryColtCell.swift */,
 				D7F105D51CE169910054C895 /* BranchSale */,
 				D7F105DE1CE195000054C895 /* HistorySale */,
 				42EBA69D1CE3795200B005D9 /* TopRank */,
@@ -407,6 +417,7 @@
 				D7C786B61CE5AF84000A9C7A /* AgentTW */,
 				42CE5D041CE8C88400992929 /* AreaSale */,
 				D71568101CE95CAA0001BF84 /* PdSale */,
+				D72720A71CEAA95900D88DB4 /* Calendar */,
 			);
 			name = Program;
 			sourceTree = "<group>";
@@ -573,11 +584,11 @@
 				D7F8013D1CE46229001630A4 /* TopRankDetailCell.swift in Sources */,
 				D71568161CE960430001BF84 /* PdSalePager.swift in Sources */,
 				D7F105DD1CE16D670054C895 /* BranchSaleCell.swift in Sources */,
+				D72720AB1CEAAB4F00D88DB4 /* CalendarView.swift in Sources */,
 				D7F8013B1CE457AD001630A4 /* TopRankDetail.swift in Sources */,
 				D7F4EAF61CE2DF15007D6926 /* PickerYMPeriod.swift in Sources */,
 				D7F105E41CE1AE140054C895 /* HistorySaleCell.swift in Sources */,
 				D71568121CE95CDA0001BF84 /* PdSale.swift in Sources */,
-				D7F801371CE41728001630A4 /* TopRankColtView.swift in Sources */,
 				D7F801421CE47F46001630A4 /* LiabilityCell.swift in Sources */,
 				D7F105E81CE1BE2A0054C895 /* PickerCountry.swift in Sources */,
 				42CE5D061CE8C8C600992929 /* AreaSale.swift in Sources */,
@@ -585,14 +596,15 @@
 				D71568181CE963800001BF84 /* PdSaleTable.swift in Sources */,
 				D752C3361CE032C7001F97DB /* NoDataView.swift in Sources */,
 				D752C32F1CE032C7001F97DB /* CalendarCellData.swift in Sources */,
-				D7F801391CE41D75001630A4 /* ColtViewCell.swift in Sources */,
 				D7F105E61CE1AEC30054C895 /* HistorySaleTotCell.swift in Sources */,
+				D72720A91CEAA9C400D88DB4 /* Calendar.swift in Sources */,
 				D715681A1CE9639B0001BF84 /* PdSaleCell.swift in Sources */,
 				D752C3951CE06F62001F97DB /* MainMenu.swift in Sources */,
 				D752C3971CE06F73001F97DB /* MainMenuCont.swift in Sources */,
 				D752C33A1CE032C7001F97DB /* PubClass.swift in Sources */,
 				D7C786B21CE562BC000A9C7A /* SearchAgent.swift in Sources */,
 				D7F801351CE414FB001630A4 /* TopRankCell.swift in Sources */,
+				D72720A61CEAA7BB00D88DB4 /* CountryColtCell.swift in Sources */,
 				D752C3331CE032C7001F97DB /* ImageClass.swift in Sources */,
 				D7C786BC1CE5C884000A9C7A /* AgentTWDetail.swift in Sources */,
 				D7F105E01CE195220054C895 /* HistorySale.swift in Sources */,

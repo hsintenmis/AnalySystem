@@ -7,11 +7,11 @@ import UIKit
 /**
  * 經銷商業績排行主頁面
  */
-class TopRank: UIViewController, TopRankColtViewDelegate {
+class TopRank: UIViewController, CountryColtViewDelegate {
     
     // @IBOutlet
     @IBOutlet weak var tableList: UITableView!
-    @IBOutlet weak var colviewCountry: TopRankColtView!
+    @IBOutlet weak var colviewCountry: CountryColtView!
     @IBOutlet weak var labCalDate: UILabel!
     @IBOutlet weak var segmDegree: UISegmentedControl!
     @IBOutlet weak var labNoData: UILabel!
@@ -45,7 +45,7 @@ class TopRank: UIViewController, TopRankColtViewDelegate {
         
         // 取得國別權限 ary, 實體化與設定 collectView 內容
         aryPriv = pubClass.getAppDelgVal("V_PRIV") as! Array<String>
-        colviewCountry.delgTopRankColtView = self
+        colviewCountry.delgCountryColtVC = self
         colviewCountry.initData(aryPriv)
         currCountryCode = aryPriv[0]
         
@@ -180,9 +180,9 @@ class TopRank: UIViewController, TopRankColtViewDelegate {
     }
     
     /**
-     * #mark: TopRankColtView Delegate, 國別選擇 collectView 點取 Cell
+     * #mark: CountryColtView Delegate, 國別選擇 collectView 點取 Cell
      */
-    func ColtViewCellSelect(countryCode: String) {
+    func CountrySelectDone(countryCode: String) {
         currCountryCode = countryCode
         chkHaveData()
     }
