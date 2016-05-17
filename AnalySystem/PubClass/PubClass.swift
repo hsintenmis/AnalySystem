@@ -36,6 +36,7 @@ enum myColor: String {
     case Black = "000000"
     case Green = "99CC33"
     case GreenDark = "336633"
+    case GreenLight = "CCFF33"
     case Gold = "FFCC66"
     case BlueSel = "0066FF"
     case GRAY333 = "303030"

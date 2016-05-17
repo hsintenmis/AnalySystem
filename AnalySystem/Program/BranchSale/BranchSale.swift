@@ -158,6 +158,47 @@ class BranchSale: UIViewController {
             self.chkHaveData()
         })
     }
+    
+    /**
+     * 全部金額加總
+     "DD_NT":"1292558.40",
+     "DD_ORG":"269283.00",
+     "MM_NT":"14870304.00",
+     "MM_ORG":"3097980.00",
+     "YY_NT":"191275233.60",
+     "YY_ORG":"39849007.00",
+     "isToday":"Y",
+     "sdate":"20160517",
+     "DD_NT_r":"1292558.40",
+     "DD_ORG_r":"269283.00",
+     "MM_NT_r":"14860425.60",
+     "MM_ORG_r":"3095922.00",
+     "YY_NT_r":"190874409.60",
+     "YY_ORG_r":"39765502.00"
+     */
+    private func calTot() {
+        let isToday = "Y"
+        let aryField = ["DD_NT", "MM_NT", "YY_NT"]
+        
+        var dictTot = 
+        
+        var dictTot_Y: Dictionary<String, Float32> = [:]
+        
+        
+        for strFiled in aryField {
+            dictTot_Y[strFiled] = 0.0
+        }
+        
+        for strCountry in dictBranchCode["all"]! {
+            let dictCountry = dictAllData[strCountry]![isToday] as! Dictionary<String, AnyObject>
+            
+            for strFiled in aryField {
+                let fltPrice = Float32(dictCountry[strFiled] as! String)
+                dictTot_Y[strFiled] = dictTot_Y[strFiled]! + fltPrice!
+            }
+        }
+
+    }
 
     
     /**

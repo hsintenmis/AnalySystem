@@ -91,3 +91,5 @@
 "branchsalenodatamsg" = "(業績資料尚未回傳)";
 "nosalethisyear" = "無資料";
 "fmt_rankname" = "第 %@ 名";
+"fmt_MD" = "%@ %@ 日";
+"err_privi" = "無權限使用該功能!";
