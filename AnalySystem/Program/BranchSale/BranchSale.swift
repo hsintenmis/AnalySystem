@@ -30,7 +30,7 @@ class BranchSale: UIViewController {
     private var dictAllData: Dictionary<String, AnyObject> = [:]
     private var aryTableData: Array<String> = []
     
-    // 對應的 branch code
+    // 國別對應的 branch code
     private var dictBranchCode: Dictionary<String, Array<String>> = [:]
     
     // 其他參數
@@ -87,6 +87,8 @@ class BranchSale: UIViewController {
         // 檢查是否有資料
         if let _ = dictAllData[strBranch]![isToday] as? Dictionary<String, AnyObject> {
             aryTableData = dictBranchCode[strBranch]!
+            
+            calTot()
         }
         else {
             aryTableData = []
@@ -177,29 +179,98 @@ class BranchSale: UIViewController {
      "YY_ORG_r":"39765502.00"
      */
     private func calTot() {
-        let isToday = "Y"
-        let aryField = ["DD_NT", "MM_NT", "YY_NT"]
+        var dictSum: Dictionary<String, Dictionary<String, AnyObject>> = [:]  // 最後回傳結果
         
-        var dictTot = 
+        let aryFlag = ["Y", "N"]
+        var aryField = ["DD_NT", "MM_NT", "YY_NT"]
+        var dictTotAll: Dictionary<String, Dictionary<String, Float64>> = [:]
         
-        var dictTot_Y: Dictionary<String, Float32> = [:]
-        
-        
-        for strFiled in aryField {
-            dictTot_Y[strFiled] = 0.0
-        }
-        
-        for strCountry in dictBranchCode["all"]! {
-            let dictCountry = dictAllData[strCountry]![isToday] as! Dictionary<String, AnyObject>
+        for strFlag in aryFlag {
+            var dictVal: Dictionary<String, Float64> = [:]
             
             for strFiled in aryField {
-                let fltPrice = Float32(dictCountry[strFiled] as! String)
-                dictTot_Y[strFiled] = dictTot_Y[strFiled]! + fltPrice!
+                dictVal[strFiled] = 0
+            }
+            
+            dictTotAll[strFlag] = dictVal
+        }
+        
+        for strFlag in aryFlag {
+            for strCountry in dictBranchCode["all"]! {
+                if let dictCountry = dictAllData["all"]![strFlag]!![strCountry] as? Dictionary<String, AnyObject> {
+                    for strFiled in aryField {
+                        let fltPrice = Float64(dictCountry[strFiled] as! String)!
+                        let orgPrice = dictTotAll[strFlag]![strFiled]!
+                        
+                        dictTotAll[strFlag]![strFiled] = fltPrice + orgPrice
+                    }
+                }
             }
         }
+ 
+        /*
+        let dictVal = dictTot["Y"]!
+        for strFiled in aryField {
+            let intVal = Int64(dictVal[strFiled]!)
+            print(intVal)
+        }
+        */
 
+        dictSum["all"] = dictTotAll
+        
+        /* TW/MY 營業處 */
+        var aryCountry: Array<String> = []
+        
+        if (btnNameTW.enabled) {
+            aryCountry.append("TW")
+        }
+        if (btnNameMY.enabled) {
+            aryCountry.append("MY")
+        }
+        
+        // 無營業處資料
+        if (aryCountry.count < 1) {
+            return
+        }
+        
+        // 營業處金額開始加總
+        aryField = ["DD_NT", "MM_NT", "YY_NT",
+                    "DD_ORG", "MM_ORG", "YY_ORG",
+                    "DD_NT_r", "MM_NT_r", "YY_NT_r",
+                    "DD_ORG_r", "MM_ORG_r", "YY_ORG_r",]
+        
+        for strCountry in aryCountry {
+            var dictTotOffice: Dictionary<String, Dictionary<String, Int64>> = [:]
+            
+            for strFlag in aryFlag {
+                var dictVal: Dictionary<String, Int64> = [:]
+                
+                for strFiled in aryField {
+                    dictVal[strFiled] = 0
+                }
+                
+                dictTotOffice[strFlag] = dictVal
+            }
+ 
+            for strFlag in aryFlag {
+                for strOffice in dictBranchCode[strCountry]! {
+                    if let dictOffice = dictAllData[strCountry]![strFlag]!![strOffice] as? Dictionary<String, AnyObject> {
+                        for strFiled in aryField {
+                            let intPrice = Int64(dictOffice[strFiled] as! String)!
+                            let orgPrice = dictTotOffice[strFlag]![strFiled]!
+                            
+                            dictTotOffice[strFlag]![strFiled] = intPrice + orgPrice
+                        }
+                    }
+                }
+            }
+            
+            //dictSum[strOffice] = dictTotOffice
+            
+            print(strCountry + ":" + "\(dictTotOffice)")
+        }
+        
     }
-
     
     /**
      * #mark: UITableView Delegate, Section 的數量
