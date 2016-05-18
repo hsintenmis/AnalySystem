@@ -54,6 +54,8 @@ class MainLogin: UIViewController {
      * View DidAppear 程序
      */
     override func viewDidAppear(animated: Bool) {
+        dictPref = pubClass.getPrefData()
+        
         edAcc.text = dictPref["acc"] as? String
         edPsd.text = dictPref["psd"] as? String
         swchSave.setOn((dictPref["issave"] as! Bool), animated: false)
