@@ -36,7 +36,7 @@ class AgentTWCell: UITableViewCell {
         let strTPV = dictItem["team_pv"] as! String
         labTeam.text = strTPV
         
-        let mColor = (Int(strTPV)! > 0) ? pubClass.ColorHEX(myColor.GRAY999.rawValue) : pubClass.ColorHEX(myColor.RedDark.rawValue)
+        let mColor = (Int(strTPV)! > 0) ? pubClass.ColorHEX(myColor.GRAY333.rawValue) : pubClass.ColorHEX(myColor.RedDark.rawValue)
         labPer.textColor = mColor
         labTeam.textColor = mColor
         labName.textColor = mColor

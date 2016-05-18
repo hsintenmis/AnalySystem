@@ -92,3 +92,4 @@
 "fmt_rankname" = "第 %@ 名";
 "fmt_MD" = "%@ %@";
 "err_privi" = "無權限使用該功能!";
+"totsalesum" = "業績合計";

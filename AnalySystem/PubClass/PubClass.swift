@@ -57,8 +57,10 @@ class PubClass {
     let aryLangCode = ["zh-Hant", "zh-Hans", "Base"]  // 語系相關
     let aryProductType = ["S", "C", "N"]   // 商品分類
     
-    // TW/MY 營業處代號
+    /** TW 營業處代號: "A","C","D","E","F" */
     let aryOfficeTW = ["A","C","D","E","F"]
+    
+    /** MY 營業處代號: "MYT01A01","MYT01A02","MYT01A03" */
     let aryOfficeMY = ["MYT01A01","MYT01A02","MYT01A03"]
     
     // 歷史業績/所有資料 開始 YYMM

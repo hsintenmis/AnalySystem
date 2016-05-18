@@ -56,9 +56,6 @@ class BranchSaleCell: UITableViewCell {
      */
     func initView(dictItem: Dictionary<String, AnyObject>!) {
         var strBranch = dictItem["branch"] as! String
-        let strFontCode = (strBranch == "all") ? "countryname_" : ("branch" + strBranch + "_")
-
-        strBranch = pubClass.getLang(strFontCode + (dictItem["office"] as! String))
         
         var bolNoData = true
         for strField in aryFiledKey {
@@ -71,8 +68,18 @@ class BranchSaleCell: UITableViewCell {
             dictField[strField]!.text = pubClass.fmtDelPoint(strPrice, bolUnit: dictItem["isUnit"] as! Bool)
         }
         
-        labBranch.text = strBranch + ((bolNoData) ? " " + pubClass.getLang("branchsalenodatamsg") : "")
-        
+        // 判別是否為'加總' 資料
+        if (!(dictItem["isSumData"] as! Bool)) {
+            let strFrontCode = (strBranch == "all") ? "countryname_" : ("branch" + strBranch + "_")
+            strBranch = pubClass.getLang(strFrontCode + (dictItem["office"] as! String))
+            
+            labBranch.text = strBranch + ((bolNoData) ? " " + pubClass.getLang("branchsalenodatamsg") : "")
+            labBranch.hidden = false
+        }
+        else {
+            labBranch.hidden = true
+        }
+ 
     }
     
 }

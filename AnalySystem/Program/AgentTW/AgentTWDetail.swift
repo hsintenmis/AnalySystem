@@ -57,7 +57,7 @@ class AgentTWDetail: UIViewController {
         labTeam.text = strTPV
         
         let intLV = Int(dictAllData["level"] as! String)!
-        labDegree.text = dictAllData[aryDegree[intLV]] as? String
+        labDegree.text = aryDegree[intLV]
         
         // 顏色
         let mColor = (Int(strTPV)! > 0) ? pubClass.ColorHEX(myColor.GRAY333.rawValue) : pubClass.ColorHEX(myColor.RedDark.rawValue)
