@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3qh-BX-kEh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3qh-BX-kEh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -27,8 +27,39 @@
                                     <constraint firstAttribute="height" constant="96" id="nFF-MM-tvA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTE 集團業績分析系統" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-Fo-4vy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-Fo-4vy">
                                 <rect key="frame" x="58" y="161" width="205" height="25"/>
+                                <mutableString key="text">HTE 集团业绩分析系统
+    主頁
+    視聽樂
+    月光部落 
+
+[線上工具｜網路資源]
+
+    中文亂碼翻譯 中文轉拼音 繁簡字對照表 倉頡輸入法練習 國語注音符號 學習鍵盤打字 
+
+繁體簡體轉換/編碼轉換
+
+繁簡轉換說明：簡體中文轉繁體中文轉簡體中文進行互相翻譯。
+
+轉換編碼說明：文字&amp;Code轉換為內碼；同時可以使用"編碼翻譯"自由轉換!!
+繁簡轉換/簡繁轉換
+Ctrl+A or Ctrl+V 總共有：12 字
+Google Gmail
+Yahoo Mail
+Facebook
+Plurk
+Google+
+WhatsApp
+WeChat
+Line
+分享
+聯絡我們 - 網站地圖 - 線上工具 - TOP
+Copyright © 2016 Online Tools, All Rights Reserved.
+讀取中...
+		
+		
+		HTE 集团业绩分析系统</mutableString>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +126,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCI-Aq-ePt">
                                 <rect key="frame" x="60" y="284" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記住我的密碼" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeI-nz-0fK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记住我的密码" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeI-nz-0fK">
                                 <rect key="frame" x="176" y="291" width="84" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -173,7 +204,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="主選單" id="Lzv-BQ-h4y">
+                                    <navigationItem title="主选单" id="Lzv-BQ-h4y">
                                         <barButtonItem key="leftBarButtonItem" title="登出" id="qoz-9N-gYy">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -281,7 +312,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="選擇國別" id="CEL-2f-BFJ">
+                                    <navigationItem title="选择国别" id="CEL-2f-BFJ">
                                         <barButtonItem key="leftBarButtonItem" title="取消" id="ASU-p1-QXE">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -356,7 +387,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="選擇日期區間" id="6lv-N9-WDb">
+                                    <navigationItem title="选择日期区间" id="6lv-N9-WDb">
                                         <barButtonItem key="leftBarButtonItem" title="取消" id="MzG-kX-K3r">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -453,8 +484,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="集團行事曆" id="SqM-ic-KQp">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="f5Q-6A-WlQ">
+                                    <navigationItem title="集团行事曆" id="SqM-ic-KQp">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="f5Q-6A-WlQ">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="bVw-MJ-Lqw" id="Txa-pJ-1zx"/>
@@ -827,7 +858,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_branchsale" text="即時業績查詢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-gI-p8A">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_branchsale" text="即时业绩查询" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-gI-p8A">
                                                     <rect key="frame" x="18" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="rdk-Yn-a1b"/>
@@ -836,7 +867,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_historysale" text="歷史業績查詢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ke-4W-Tgr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_historysale" text="历史业绩查询" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ke-4W-Tgr">
                                                     <rect key="frame" x="116" y="76" width="92" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="3cx-63-vqH"/>
@@ -845,7 +876,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_agentrank" text="經銷商業績排行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCS-UZ-GwQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="menuname_agentrank" text="经销商业绩排行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCS-UZ-GwQ">
                                                     <rect key="frame" x="213" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="t2W-yZ-fGq"/>
@@ -918,7 +949,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="經銷商責任額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF3-vU-fcH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经销商责任额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF3-vU-fcH">
                                                     <rect key="frame" x="18" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="ttq-D5-0yp"/>
@@ -927,7 +958,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="經銷商查詢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPG-4v-UMB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经销商查询" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPG-4v-UMB">
                                                     <rect key="frame" x="116" y="76" width="92" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="iKh-jG-38P"/>
@@ -936,7 +967,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台灣總裁查詢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-MW-JEb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台湾总裁查询" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-MW-JEb">
                                                     <rect key="frame" x="213" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="Jln-xN-K18"/>
@@ -1009,7 +1040,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美利區域代理排行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-8g-TIc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美利区域代理排行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-8g-TIc">
                                                     <rect key="frame" x="18" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="5Fh-fm-z39"/>
@@ -1018,7 +1049,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="產品銷售排名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnW-eS-6Kr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="产品销售排名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnW-eS-6Kr">
                                                     <rect key="frame" x="116" y="76" width="92" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="SoU-9f-Mcr"/>
@@ -1027,7 +1058,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集團行事曆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-9q-Mla">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="集团行事曆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnZ-9q-Mla">
                                                     <rect key="frame" x="213" y="76" width="93" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="Srz-7F-p4m"/>
@@ -1231,8 +1262,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="商品銷售排名" id="fBN-jQ-cVT">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="jwA-VE-ne1">
+                                    <navigationItem title="商品销售排名" id="fBN-jQ-cVT">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="jwA-VE-ne1">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="aZz-zT-zuq" id="jsr-sd-Lge"/>
@@ -1466,7 +1497,7 @@
                                             <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數量:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-8Y-N6h">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-8Y-N6h">
                                             <rect key="frame" x="162" y="77" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="S85-RD-LBO"/>
@@ -1475,7 +1506,7 @@
                                             <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原幣:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-Rk-RkX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原币:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-Rk-RkX">
                                             <rect key="frame" x="162" y="95" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="EOF-kI-D5c"/>
@@ -1484,7 +1515,7 @@
                                             <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台幣:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJZ-W4-buv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台币:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJZ-W4-buv">
                                             <rect key="frame" x="162" y="110" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="quv-nM-SPq"/>
@@ -1546,7 +1577,7 @@
                                             <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原幣:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgv-e0-7DI">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原币:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgv-e0-7DI">
                                             <rect key="frame" x="162" y="164" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="F2o-lD-W0I"/>
@@ -1555,7 +1586,7 @@
                                             <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台幣:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-VG-7C9">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台币:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-VG-7C9">
                                             <rect key="frame" x="162" y="182" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="RwE-lU-W8s"/>
@@ -1564,7 +1595,7 @@
                                             <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數量:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-Qd-IPt">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-Qd-IPt">
                                             <rect key="frame" x="162" y="197" width="24" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="9dk-d4-EBH"/>
@@ -1698,8 +1729,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="經銷商業績排行" id="vvs-LF-GEf">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="KCx-fV-hfd">
+                                    <navigationItem title="经销商业绩排行" id="vvs-LF-GEf">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="KCx-fV-hfd">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="l5H-T4-ee6" id="HuL-zC-YXB"/>
@@ -1768,7 +1799,7 @@
                                     <constraint firstAttribute="height" constant="24" id="xY6-ge-Mqw"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="統計日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-kr-kHZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="统计日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-kr-kHZ">
                                 <rect key="frame" x="8" y="117" width="44" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="cdt-7T-KZ2"/>
@@ -1786,7 +1817,7 @@
                                 <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="綠色: 個人 pv" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NF-dN-26E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="绿色: 个人 pv" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NF-dN-26E">
                                 <rect key="frame" x="180" y="117" width="61" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="8XB-yg-Hak"/>
@@ -1795,7 +1826,7 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黑色: 小組 pv" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqS-v9-Ycc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黑色: 小组 pv" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqS-v9-Ycc">
                                 <rect key="frame" x="251" y="117" width="61" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="auD-aa-bAb"/>
@@ -1825,7 +1856,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="WTI-fr-NZs">
                                 <rect key="frame" x="-2" y="178" width="324" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前無資料 . . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WhJ-W6-rsd">
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前无资料 . . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WhJ-W6-rsd">
                                     <rect key="frame" x="0.0" y="66" width="324" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -2000,8 +2031,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="經銷商責任額" id="QVd-3f-Giq">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="g0X-T3-bPe">
+                                    <navigationItem title="经销商责任额" id="QVd-3f-Giq">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="g0X-T3-bPe">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="U7H-Kg-zZj" id="I5S-Z4-vm1"/>
@@ -2010,7 +2041,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貨幣單位: 萬元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7g-gH-cma">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="货币单位: 万元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7g-gH-cma">
                                 <rect key="frame" x="245" y="78" width="67" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="PMx-G2-mQX"/>
@@ -2019,7 +2050,7 @@
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="國別 / 地區:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dG-j0-1Ib">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国别 / 地区:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dG-j0-1Ib">
                                 <rect key="frame" x="8" y="74" width="63" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="ucd-TC-CcF"/>
@@ -2063,7 +2094,7 @@
                                                     <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晉升日:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-Wk-fwY" userLabel="labDate">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晋升日:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-Wk-fwY" userLabel="labDate">
                                                     <rect key="frame" x="187" y="47" width="40" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="G0k-ql-j9m"/>
@@ -2314,8 +2345,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="經銷商查詢" id="h4c-u4-2fv">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="PU7-Iv-Afi">
+                                    <navigationItem title="经销商查询" id="h4c-u4-2fv">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="PU7-Iv-Afi">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="M2C-Fd-AjP" id="Snz-uw-bqK"/>
@@ -2355,7 +2386,7 @@
                                             <outlet property="delegate" destination="M2C-Fd-AjP" id="NKk-v7-Hk0"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名 / 電話 / 編號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-B5-pb4">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名 / 电话 / 编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1x-B5-pb4">
                                         <rect key="frame" x="90" y="8" width="226" height="30"/>
                                         <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -2380,7 +2411,7 @@
                                             <constraint firstAttribute="height" constant="30" id="76o-Qb-M9h"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="搜尋">
+                                        <state key="normal" title="搜寻">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2423,7 +2454,7 @@
                                     <constraint firstItem="Qrk-Yn-rja" firstAttribute="leading" secondItem="aMd-fc-Gri" secondAttribute="trailing" constant="2" id="vN5-DF-wKS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="資料總數:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOA-KB-xAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="资料总数:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOA-KB-xAK">
                                 <rect key="frame" x="8" y="194" width="52" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="alu-Mg-a02"/>
@@ -2438,7 +2469,7 @@
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(僅顯示總裁等級以上)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYS-33-zfA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(仅显示总裁等级以上)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYS-33-zfA">
                                 <rect key="frame" x="214" y="194" width="98" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -2502,7 +2533,7 @@
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個人pv:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aut-6P-Xxi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人pv:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aut-6P-Xxi">
                                                     <rect key="frame" x="18" y="129" width="60" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="1rd-HO-mcz"/>
@@ -2653,8 +2684,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="美利區域代理排名" id="vxd-zb-7vd">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="Zya-Wz-3II">
+                                    <navigationItem title="美利区域代理排名" id="vxd-zb-7vd">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="Zya-Wz-3II">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="pZn-OA-eUF" id="1KE-xf-PMS"/>
@@ -2663,15 +2694,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="統計日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-eh-zJw">
-                                <rect key="frame" x="8" y="74" width="44" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="9tM-Fi-QA9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="med-me-oj9">
                                 <rect key="frame" x="57" y="74" width="12" height="14"/>
                                 <constraints>
@@ -2729,7 +2751,7 @@
                                                             <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="區域代理起始日:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-Kg-ndh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="区域代理起始日:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-Kg-ndh">
                                                             <rect key="frame" x="159" y="52" width="74" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -2773,7 +2795,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="佔分公司業績" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GB6-ql-toY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="佔分公司业绩" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GB6-ql-toY">
                                                     <rect key="frame" x="167" y="101" width="60" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="4Pp-8m-BeU"/>
@@ -2805,7 +2827,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="pbs-JY-IDS"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本年度業績總計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ1-2c-Cv3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本年度业绩总计" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ1-2c-Cv3">
                                                     <rect key="frame" x="38" y="140" width="84" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="tKD-Oq-XaA"/>
@@ -2820,7 +2842,7 @@
                                                     <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近一年業績列表" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAV-NY-N4u">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近一年业绩列表" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAV-NY-N4u">
                                                     <rect key="frame" x="151" y="140" width="155" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="3sR-X8-7Wj"/>
@@ -2906,13 +2928,22 @@
                                     <outlet property="delegate" destination="pZn-OA-eUF" id="X73-Ok-Qbm"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貨幣單位: 人民幣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-u4-Dg2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="货币单位: 人民币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-u4-Dg2">
                                 <rect key="frame" x="235" y="74" width="77" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="HhX-eZ-RlK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="统计日期:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-eh-zJw">
+                                <rect key="frame" x="8" y="74" width="44" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="9tM-Fi-QA9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2971,8 +3002,8 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="台灣總裁查詢" id="NYt-S0-nw6">
-                                        <barButtonItem key="leftBarButtonItem" title="主選單" id="0Hm-y3-ahY">
+                                    <navigationItem title="台湾总裁查询" id="NYt-S0-nw6">
+                                        <barButtonItem key="leftBarButtonItem" title="主选单" id="0Hm-y3-ahY">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="actBack:" destination="dxr-aR-zU8" id="ufb-yn-AZ5"/>
@@ -2981,7 +3012,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" placeholder="搜尋姓名, 電話, 編號" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xxf-7u-mHx">
+                            <searchBar contentMode="redraw" text="" placeholder="搜寻姓名, 电话, 编号" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xxf-7u-mHx">
                                 <rect key="frame" x="-2" y="64" width="324" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -2991,7 +3022,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-Uw-7s1" userLabel="viewHead">
                                 <rect key="frame" x="-2" y="108" width="324" height="26"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="項次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIo-T2-MMU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIo-T2-MMU">
                                         <rect key="frame" x="10" y="6" width="20" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="0ia-7K-BqI"/>
@@ -3000,7 +3031,7 @@
                                         <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小組積分" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM5-J2-fHw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小组积分" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WM5-J2-fHw">
                                         <rect key="frame" x="274" y="6" width="40" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="e5E-qo-2Oe"/>
@@ -3009,7 +3040,7 @@
                                         <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小組積分" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-q0-Per">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小组积分" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-q0-Per">
                                         <rect key="frame" x="219" y="6" width="40" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="klm-LG-PZT"/>
@@ -3162,7 +3193,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="台灣總裁查詢" id="Xco-fP-2fh">
+                                    <navigationItem title="台湾总裁查询" id="Xco-fP-2fh">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="T4i-OY-34Z">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -3253,7 +3284,7 @@
                                         <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小組積分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Wo-0oq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小组积分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Wo-0oq">
                                         <rect key="frame" x="221" y="32" width="44" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="a2e-qo-PYI"/>
@@ -3271,7 +3302,7 @@
                                         <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個人積分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-Y2-5nz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人积分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEm-Y2-5nz">
                                         <rect key="frame" x="123" y="32" width="44" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="s7G-JE-ypR"/>
@@ -3312,7 +3343,7 @@
                                     <constraint firstItem="lpr-IV-Yvg" firstAttribute="top" secondItem="T5Q-BQ-Z42" secondAttribute="bottom" constant="6" id="x2T-lp-wOm"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下線列表(僅列出總裁)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpG-Bg-rMo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下线列表(仅列出总裁)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpG-Bg-rMo">
                                 <rect key="frame" x="92" y="219" width="136" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -3398,7 +3429,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小組積分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBZ-W7-wN6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小组积分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBZ-W7-wN6">
                                                     <rect key="frame" x="218" y="36" width="44" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="s3f-Jm-nti"/>
@@ -3416,7 +3447,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個人積分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-eo-F2h">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人积分:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-eo-F2h">
                                                     <rect key="frame" x="120" y="36" width="44" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="lQ7-YU-VjW"/>
@@ -3481,7 +3512,7 @@
                                     <outlet property="delegate" destination="hTc-uV-sIB" id="h4L-49-bM0"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目前無資料 . . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGR-U1-7Iu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="目前无资料 . . ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGR-U1-7Iu">
                                 <rect key="frame" x="-2" y="262" width="324" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -3549,7 +3580,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="1" vertical="-1"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="經銷商小組積分來源" id="owl-hU-l4A">
+                                    <navigationItem title="经销商小组积分来源" id="owl-hU-l4A">
                                         <barButtonItem key="leftBarButtonItem" title="返回" id="amB-AN-5na">
                                             <color key="tintColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -3655,7 +3686,7 @@
                                     <constraint firstAttribute="trailing" secondItem="e02-SB-sic" secondAttribute="trailing" constant="10" id="yfy-T9-0Fu"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="積分來源列表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alq-Zi-DFR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分来源列表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alq-Zi-DFR">
                                 <rect key="frame" x="118" y="219" width="84" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="iXj-fJ-ESj"/>
@@ -3709,7 +3740,7 @@
                                                     <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取得 pv 合計:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAZ-9P-GYL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取得 pv 合计:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAZ-9P-GYL">
                                                     <rect key="frame" x="196" y="147" width="72" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="yeW-g3-gZf"/>

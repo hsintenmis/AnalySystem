@@ -33,6 +33,7 @@ class MainLogin: UIViewController {
         // 參數與頁面 field 設定
         dictPref = pubClass.getPrefData()
         btnLogin.layer.cornerRadius = 5
+        swchLang.hidden = true
         
         // 語系 switch 預設
         let langCode = pubClass.getPrefData("lang") as! String

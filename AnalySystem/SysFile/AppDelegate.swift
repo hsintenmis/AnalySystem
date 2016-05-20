@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 全域變數
     var V_USRACC: String?
     var V_USRPSD: String?
-    var V_LANGCODE: String = "zh-Hant"
+    var V_LANGCODE: String = "zh-Hans"
     var V_PRIV: Array<String> = []  // 登入者國別權限 array
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
