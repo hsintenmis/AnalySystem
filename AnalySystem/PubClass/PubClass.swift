@@ -63,6 +63,7 @@ class PubClass {
     /** MY 營業處代號: "MYT01A01","MYT01A02","MYT01A03" */
     let aryOfficeMY = ["MYT01A01","MYT01A02","MYT01A03"]
     
+    /*
     /** 亞太 營業處代號: "MY", "SG", "ID", "TH", "VN" */
     let aryOfficeASIA = ["MY", "SG", "ID", "TH", "VN"]
     
@@ -71,6 +72,7 @@ class PubClass {
     
     /** 中國 營業處代號: "SH", "CC", "SZ", "XA", "CQ", "QD" */
     let aryOfficeCHINA = ["SH", "CC", "SZ", "XA", "CQ", "QD"]
+    */
     
     // 歷史業績/所有資料 開始 YYMM
     let D_YYMM_START = "200501"

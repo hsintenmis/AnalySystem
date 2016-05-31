@@ -18,7 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var V_USRPSD: String?
     var V_LANGCODE: String = "zh-Hans"
     var V_PRIV: Array<String> = []  // 登入者國別權限 array
+    
+    // 區域國別, 亞太/美洲/中國
+    var V_AREACODENAME: Array<String> = []  // 區域名稱的代碼
+    var V_AREABRANCH: Dictionary<String, Array<String>> = [:]
 
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         

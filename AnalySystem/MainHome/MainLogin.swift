@@ -127,6 +127,7 @@ class MainLogin: UIViewController {
         var dicTranData: Dictionary<String, AnyObject> = [:]
         dicTranData["name"] = dictRS["data"]!["name"]
         
+        // 國別權限
         if let strPriv = dictData!["priv"] as? String {
             let aryPriv = strPriv.componentsSeparatedByString(",")
             dicTranData["priv"] = aryPriv
@@ -136,9 +137,15 @@ class MainLogin: UIViewController {
             
             return
         }
+
+        // 區域國別, 亞太/美洲/中國
+        let aryArea = dictData!["areacode"] as! Array<String>
+        pubClass.setAppDelgVal("V_AREACODENAME", withVal: aryArea)
+        
+        let dictArea = dictData!["area"] as! Dictionary<String, Array<String>>
+        pubClass.setAppDelgVal("V_AREABRANCH", withVal: dictArea)
         
         // 跳轉至指定的名稱的Segue頁面, 傳遞參數
-
         self.performSegueWithIdentifier("MainMenu", sender: dicTranData)
     }
 

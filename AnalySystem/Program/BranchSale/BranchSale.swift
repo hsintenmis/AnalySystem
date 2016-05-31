@@ -46,8 +46,9 @@ class BranchSale: UIViewController {
     private var isPriceUnit = false  // 是否切換 '萬元'
     private var aryCalDate: Array<String>!
     
-    // 特殊區域 與 button, 有順序對應
-    private let arySpecArea = ["AMERICA", "ASIA", "CHINA"]
+    // 2016/05/31, 特殊區域 與 button, 有順序對應
+    private var dictAreaBranch: Dictionary<String, Array<String>> = [:]
+    private var arySpecArea: Array<String>!
     private var arySpecAreaBtn: Array<UIBarButtonItem>!
 
     /**
@@ -58,16 +59,15 @@ class BranchSale: UIViewController {
         
         arySpecAreaBtn = [btnNameAMERICA, btnNameASIA, btnNameCHINA]
         
+        // 2016/05/31, 新增 亞太/美洲/中國
+        arySpecArea = pubClass.getAppDelgVal("V_AREACODENAME") as! Array<String>
+        dictBranchCode = pubClass.getAppDelgVal("V_AREABRANCH") as! Dictionary<String, Array<String>>
+        
         // 對應的 branch code
         dictBranchCode["all"] = pubClass.getAppDelgVal("V_PRIV") as? Array<String>
         dictBranchCode["TW"] = pubClass.aryOfficeTW
         dictBranchCode["MY"] = pubClass.aryOfficeMY
-        
-        // 2016/05/31, 新增 亞太/美洲/中國
-        dictBranchCode["AMERICA"] = pubClass.aryOfficeAMERICA
-        dictBranchCode["ASIA"] = pubClass.aryOfficeASIA
-        dictBranchCode["CHINA"] = pubClass.aryOfficeCHINA
-        
+
         // 檢查權限, TW/MY
         for strBranch in dictBranchCode["all"]! {
             if (strBranch == "TW") {

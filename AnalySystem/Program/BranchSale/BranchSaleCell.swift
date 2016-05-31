@@ -36,7 +36,7 @@ class BranchSaleCell: UITableViewCell {
     
     private var dictField: Dictionary<String, UILabel> = [:]
     
-    private var aryArea = ["all", "AMERICA", "ASIA", "CHINA"]
+    private var aryArea: Array<String>!
     
     /**
      * Cell Load
@@ -53,6 +53,9 @@ class BranchSaleCell: UITableViewCell {
         dictField["YY_NT"] = YY_NT
         dictField["YY_ORG"] = YY_ORG
         dictField["YY_NT_r"] = YY_NT_r
+        
+        aryArea = pubClass.getAppDelgVal("V_AREACODENAME") as! Array<String>
+        aryArea.insert("all", atIndex: 0)
     }
     
     /**
@@ -89,6 +92,13 @@ class BranchSaleCell: UITableViewCell {
         }
         else {
             labBranch.hidden = true
+            
+            // 顯示原幣別加總, 僅限 TW/MY  CHINA
+            if (strBranch != "MY" && strBranch != "CHINA") {
+                YY_ORG.text = "--"
+                MM_ORG.text = "--"
+                DD_ORG.text = "--"
+            }
         }
  
     }
