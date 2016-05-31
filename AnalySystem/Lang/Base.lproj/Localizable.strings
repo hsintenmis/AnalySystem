@@ -59,6 +59,10 @@
 "countryname_CQ" = "重庆";
 "countryname_QD" = "青岛";
 
+"countryname_AMERICA" = "美洲";
+"countryname_ASIA" = "亚太";
+"countryname_CHINA" = "美利";
+
 "branchTW_A" = "台北";
 "branchTW_C" = "台中";
 "branchTW_D" = "台南";

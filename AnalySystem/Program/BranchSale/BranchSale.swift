@@ -19,9 +19,14 @@ class BranchSale: UIViewController {
     @IBOutlet weak var labCalDate: UILabel!
     @IBOutlet weak var labMsgGray: UILabel!
     @IBOutlet weak var labMsgGreen: UILabel!
+    
     @IBOutlet weak var btnNameGlobal: UIBarButtonItem!
     @IBOutlet weak var btnNameTW: UIBarButtonItem!
     @IBOutlet weak var btnNameMY: UIBarButtonItem!
+    
+    @IBOutlet weak var btnNameAMERICA: UIBarButtonItem!
+    @IBOutlet weak var btnNameASIA: UIBarButtonItem!
+    @IBOutlet weak var btnNameCHINA: UIBarButtonItem!
     
     // common property
     private var pubClass = PubClass()
@@ -35,11 +40,15 @@ class BranchSale: UIViewController {
     private var dictBranchCode: Dictionary<String, Array<String>> = [:]
     
     // 其他參數
-    private var aryAllBranch = ["all", "TW", "MY"]
-    private var strBranch = "all"  // all, TW, MY
+    private var aryAllBranch = ["all", "AMERICA", "ASIA", "CHINA", "TW", "MY"]
+    private var strCurrBranch = "all"  // all, TW, MY
     private var isToday = "Y"  // Y=今日, N=前月
     private var isPriceUnit = false  // 是否切換 '萬元'
     private var aryCalDate: Array<String>!
+    
+    // 特殊區域 與 button, 有順序對應
+    private let arySpecArea = ["AMERICA", "ASIA", "CHINA"]
+    private var arySpecAreaBtn: Array<UIBarButtonItem>!
 
     /**
      * viewDidLoad
@@ -47,10 +56,17 @@ class BranchSale: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        arySpecAreaBtn = [btnNameAMERICA, btnNameASIA, btnNameCHINA]
+        
         // 對應的 branch code
         dictBranchCode["all"] = pubClass.getAppDelgVal("V_PRIV") as? Array<String>
         dictBranchCode["TW"] = pubClass.aryOfficeTW
         dictBranchCode["MY"] = pubClass.aryOfficeMY
+        
+        // 2016/05/31, 新增 亞太/美洲/中國
+        dictBranchCode["AMERICA"] = pubClass.aryOfficeAMERICA
+        dictBranchCode["ASIA"] = pubClass.aryOfficeASIA
+        dictBranchCode["CHINA"] = pubClass.aryOfficeCHINA
         
         // 檢查權限, TW/MY
         for strBranch in dictBranchCode["all"]! {
@@ -61,6 +77,26 @@ class BranchSale: UIViewController {
                 btnNameMY.enabled = true
             }
         }
+        
+        // 檢查權限, 亞太/美洲/中國
+        for loopi in (0..<arySpecArea.count) {
+            let aryOffice = dictBranchCode[arySpecArea[loopi]]!
+            let numsTot = aryOffice.count
+            var numsTmp = 0
+
+            for strOffice0 in aryOffice {
+                for strOffice1 in dictBranchCode["all"]! {
+                    if (strOffice0 == strOffice1) {
+                        numsTmp += 1
+                    }
+                }
+            }
+            
+            if (numsTot == numsTmp) {
+                arySpecAreaBtn[loopi].enabled = true
+            }
+        }
+        
         
         // 設定頁面語系
         self.setPageLang()
@@ -86,8 +122,8 @@ class BranchSale: UIViewController {
      */
     private func chkHaveData() {
         // 檢查是否有資料
-        if let _ = dictAllData[strBranch]![isToday] as? Dictionary<String, AnyObject> {
-            aryTableData = dictBranchCode[strBranch]!
+        if let _ = dictAllData[strCurrBranch]![isToday] as? Dictionary<String, AnyObject> {
+            aryTableData = dictBranchCode[strCurrBranch]!
             
             calTot()
         }
@@ -152,6 +188,23 @@ class BranchSale: UIViewController {
             tmpAllData["TW"] = dictTW
             tmpAllData["MY"] = dictMY
             
+            // 特殊區域
+            let dictTot_Y = dictData["tot"]!["Y"] as! Dictionary<String, AnyObject>
+            let dictTot_N = dictData["tot"]!["N"] as! Dictionary<String, AnyObject>
+            
+            for strArea in self.arySpecArea {
+                var dictAreaData: Dictionary<String, Dictionary<String, AnyObject>> = [:]
+                dictAreaData["Y"] = [:]
+                dictAreaData["N"] = [:]
+                
+                for strAreaOffice in self.dictBranchCode[strArea]! {
+                    dictAreaData["Y"]![strAreaOffice] = dictTot_Y[strAreaOffice]
+                    dictAreaData["N"]![strAreaOffice] = dictTot_N[strAreaOffice]
+                }
+                
+                tmpAllData[strArea] = dictAreaData
+            }
+            
             // 統計日期文字設定到 array
             let strDate0 = self.pubClass.formatDateWithStr(dictData["today"] as! String, type: 8)
             let strDate1 = self.pubClass.formatDateWithStr(dictData["premonth"] as! String, type: 8)
@@ -176,6 +229,13 @@ class BranchSale: UIViewController {
         }
         if (btnNameMY.enabled) {
             aryCountry.append("MY")
+        }
+        
+        // 特殊區域
+        for loopi in (0..<arySpecAreaBtn.count)  {
+            if (arySpecAreaBtn[loopi].enabled) {
+                aryCountry.append(arySpecArea[loopi])
+            }
         }
         
         // 金額加總計算
@@ -259,7 +319,7 @@ class BranchSale: UIViewController {
         
         // 國別 or 加總 資料
         if (indexPath.section == 0) {
-            let dictBranchdata = dictAllData[strBranch]![isToday] as! Dictionary<String, AnyObject>
+            let dictBranchdata = dictAllData[strCurrBranch]![isToday] as! Dictionary<String, AnyObject>
             if let dictTmp = dictBranchdata[strOffice] as? Dictionary<String, AnyObject> {
                 dictItem = dictTmp
             }
@@ -267,11 +327,11 @@ class BranchSale: UIViewController {
             dictItem["isSumData"] = false
         }
         else {
-            dictItem = dictSum[isToday]![strBranch] as! Dictionary<String, AnyObject>
+            dictItem = dictSum[isToday]![strCurrBranch] as! Dictionary<String, AnyObject>
             dictItem["isSumData"] = true
         }
         
-        dictItem["branch"] = strBranch
+        dictItem["branch"] = strCurrBranch
         dictItem["office"] = strOffice
         dictItem["isUnit"] = isPriceUnit
         
@@ -291,7 +351,7 @@ class BranchSale: UIViewController {
             return "-- " + pubClass.getLang("totsalesum") + " --"
         }
         
-        return pubClass.getLang("countryname_" + strBranch)
+        return pubClass.getLang("countryname_" + strCurrBranch)
     }
     
     /**
@@ -317,8 +377,8 @@ class BranchSale: UIViewController {
     @IBAction func actReload(sender: UIBarButtonItem) {
         // field 與相關參數重設
         isToday = "Y"
-        strBranch = "all"
-        aryTableData = dictBranchCode[strBranch]!
+        strCurrBranch = "all"
+        aryTableData = dictBranchCode[strCurrBranch]!
         segmToday.selectedSegmentIndex = 0
         swchPriceUnit.on = false
         
@@ -337,8 +397,8 @@ class BranchSale: UIViewController {
      * act, btn Group, 點取 全球/TW/MY
      */
     @IBAction func actGrpBranch(sender: UIBarButtonItem) {
-        strBranch = aryAllBranch[sender.tag]
-        aryTableData = dictBranchCode[strBranch]!
+        strCurrBranch = aryAllBranch[sender.tag]
+        aryTableData = dictBranchCode[strCurrBranch]!
         tableList.reloadData()
     }
     

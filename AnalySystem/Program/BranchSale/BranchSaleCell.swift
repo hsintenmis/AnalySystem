@@ -29,10 +29,14 @@ class BranchSaleCell: UITableViewCell {
     @IBOutlet weak var YY_NT_r: UILabel!
     
     private var pubClass = PubClass()
+    
     private var aryFiledKey = ["DD_NT", "DD_ORG", "DD_NT_r",
                                "MM_NT", "MM_ORG", "MM_NT_r",
                                "YY_NT", "YY_ORG", "YY_NT_r"]
+    
     private var dictField: Dictionary<String, UILabel> = [:]
+    
+    private var aryArea = ["all", "AMERICA", "ASIA", "CHINA"]
     
     /**
      * Cell Load
@@ -70,7 +74,14 @@ class BranchSaleCell: UITableViewCell {
         
         // 判別是否為'加總' 資料
         if (!(dictItem["isSumData"] as! Bool)) {
-            let strFrontCode = (strBranch == "all") ? "countryname_" : ("branch" + strBranch + "_")
+            var strFrontCode = "branch" + strBranch + "_"
+            for strArea in aryArea {
+                if (strArea == strBranch) {
+                    strFrontCode = "countryname_"
+                    break
+                }
+            }
+ 
             strBranch = pubClass.getLang(strFrontCode + (dictItem["office"] as! String))
             
             labBranch.text = strBranch + ((bolNoData) ? " " + pubClass.getLang("branchsalenodatamsg") : "")

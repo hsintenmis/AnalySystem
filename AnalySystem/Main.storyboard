@@ -29,7 +29,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW4-Fo-4vy">
                                 <rect key="frame" x="58" y="161" width="205" height="25"/>
-                                <mutableString key="text">HTE 集团业绩分析系统
+                                <string key="text">HTE 集团业绩分析系统
     主頁
     視聽樂
     月光部落 
@@ -59,7 +59,7 @@ Copyright © 2016 Online Tools, All Rights Reserved.
 讀取中...
 		
 		
-		HTE 集团业绩分析系统</mutableString>
+		HTE 集团业绩分析系统</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
